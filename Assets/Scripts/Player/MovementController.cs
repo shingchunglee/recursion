@@ -4,38 +4,51 @@ using UnityEngine;
 
 public class MovementController : MonoBehaviour
 {
+    [SerializeField] SpriteRenderer spriteRenderer;
+    private float horizontalMovement;
+    private float verticalMovement;
     // Start is called before the first frame update
     void Start()
     {
 
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
+        Vector3 movement = new Vector3(horizontalMovement, verticalMovement, 0).normalized;
+        Debug.Log(movement);
+        transform.Translate(movement * 2f * Time.deltaTime);
     }
 
     public void MoveLeft()
     {
-        Vector3 movement = new Vector3(-1f, 0f, 0f);
-        transform.Translate(movement * Time.deltaTime * 2f);
+        horizontalMovement = -1f;
+        spriteRenderer.flipX = true;
     }
 
     public void MoveRight()
     {
-        Vector3 movement = new Vector3(1f, 0f, 0f);
-        transform.Translate(movement * Time.deltaTime * 2f);
+        horizontalMovement = 1f;
+        spriteRenderer.flipX = false;
     }
 
     public void MoveUp()
     {
-        Vector3 movement = new Vector3(0f, 1f, 0f);
-        transform.Translate(movement * Time.deltaTime * 2f);
+        verticalMovement = 1f;
     }
 
     public void MoveDown()
     {
-        Vector3 movement = new Vector3(0f, -1f, 0f);
-        transform.Translate(movement * Time.deltaTime * 2f);
+        verticalMovement = -1f;
+    }
+
+    public void StopHorizontal()
+    {
+        horizontalMovement = 0f;
+    }
+
+    public void StopVertical()
+    {
+        verticalMovement = 0f;
     }
 }

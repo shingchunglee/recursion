@@ -8,6 +8,9 @@ public class InputManager : MonoBehaviour
     [SerializeField] UnityEvent MoveRight;
     [SerializeField] UnityEvent MoveUp;
     [SerializeField] UnityEvent MoveDown;
+    [SerializeField] UnityEvent ReleaseHorizontal;
+    [SerializeField] UnityEvent ReleaseVertical;
+    [SerializeField] UnityEvent ReleaseAll;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +38,18 @@ public class InputManager : MonoBehaviour
         if (verticalInput > 0)
         {
             MoveUp.Invoke();
+        }
+        if (horizontalInput == 0)
+        {
+            ReleaseHorizontal.Invoke();
+        }
+        if (verticalInput == 0)
+        {
+            ReleaseVertical.Invoke();
+        }
+        if (horizontalInput == 0 && verticalInput == 0)
+        {
+            ReleaseAll.Invoke();
         }
     }
 }
