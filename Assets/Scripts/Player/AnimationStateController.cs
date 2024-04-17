@@ -1,62 +1,56 @@
 using UnityEngine;
 
-public class AnimationState : MonoBehaviour
+public class AnimationStateController : MonoBehaviour
 {
-    private enum States
-    {
-        Idle,
-        Win,
-        Run,
-        Dead
-    }
-    private States currentState;
+    public Animator animator;
+    private BaseAnimationState currentState;
+    public Idle idleState = new Idle();
+    public IdleSit idleSit = new IdleSit();
+    public Walk runState = new Walk();
+    public Dead deadState = new Dead();
+    public Win winState = new Win();
 
     private void Start()
     {
-        currentState = States.Idle;
+        ChangeState(idleState);
     }
 
     private void Update()
     {
-        switch (currentState)
+        if (currentState != null)
         {
-            case States.Idle:
-                IdleUpdate();
-                break;
-            case States.Win:
-                WinUpdate();
-                break;
-            case States.Run:
-                RunUpdate();
-                break;
-            case States.Dead:
-                DeadUpdate();
-                break;
+            currentState.Update(this);
         }
     }
 
-    private void IdleUpdate()
+    public void ChangeState(BaseAnimationState state)
     {
-        // idle animation
+        if (currentState != null) { currentState.OnExitState(this); }
+        currentState = state;
+        currentState.OnEnterState(this);
     }
 
-    private void WinUpdate()
+    public void OnRun()
     {
-        // win animation
+        if (currentState == runState) return;
+        ChangeState(runState);
     }
 
-    private void RunUpdate()
+    public void OnIdle()
     {
-        // run animation
+        if (currentState == idleState || currentState == idleSit) return;
+        ChangeState(idleState);
     }
 
-    private void DeadUpdate()
+    public void OnWin()
     {
-        // dead animation
+        if (currentState == winState) return;
+        ChangeState(winState);
     }
 
-    public void ChangeState(States newState)
+    public void OnDeath()
     {
-        currentState = newState;
+        if (currentState == deadState) return;
+        ChangeState(deadState);
     }
 }

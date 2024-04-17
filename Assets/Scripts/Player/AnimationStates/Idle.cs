@@ -1,17 +1,27 @@
+using System.Collections;
+using UnityEngine;
+
 public class Idle : BaseAnimationState
 {
-    public override void OnEnterState()
+    private Coroutine coroutine;
+    public override void OnEnterState(AnimationStateController controller)
     {
-        throw new System.NotImplementedException();
+        controller.animator.Play("idle");
+        coroutine = controller.StartCoroutine(Sit(controller));
     }
 
-    public override void OnExitState()
+    public override void OnExitState(AnimationStateController controller)
     {
-        throw new System.NotImplementedException();
+        controller.StopCoroutine(coroutine);
     }
 
-    public override void Update()
+    public override void Update(AnimationStateController controller)
     {
-        throw new System.NotImplementedException();
+    }
+
+    IEnumerator Sit(AnimationStateController controller)
+    {
+        yield return new WaitForSeconds(5f);
+        controller.ChangeState(controller.idleSit);
     }
 }
