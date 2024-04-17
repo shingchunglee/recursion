@@ -16,7 +16,6 @@ public class MovementController : MonoBehaviour
     void FixedUpdate()
     {
         Vector3 movement = new Vector3(horizontalMovement, verticalMovement, 0).normalized;
-        Debug.Log(movement);
         transform.Translate(movement * 2f * Time.deltaTime);
     }
 
