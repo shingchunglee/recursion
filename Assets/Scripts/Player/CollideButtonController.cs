@@ -11,28 +11,25 @@ public class CollideButtonController : MonoBehaviour
     {
         if (CurrentButtonTrigger != null)
         {
-            // Debug.Log(CurrentButtonTrigger);
             CurrentButtonTrigger.Trigger();
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other);
-        if (other.TryGetComponent<ButtonTriggerController>(out ButtonTriggerController buttonTrigger))
+        if (other.TryGetComponent(out ButtonTriggerController buttonTrigger))
         {
-            // buttonTrigger.Trigger();
             CurrentButtonTrigger = buttonTrigger;
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log(other);
-        if (other.TryGetComponent<ButtonTriggerController>(out ButtonTriggerController buttonTrigger))
+        if (other.TryGetComponent(out ButtonTriggerController buttonTrigger))
         {
             if (CurrentButtonTrigger == buttonTrigger)
             {
+                CurrentButtonTrigger.Release();
                 CurrentButtonTrigger = null;
             }
         }
