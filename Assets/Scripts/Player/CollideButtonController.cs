@@ -1,23 +1,32 @@
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class CollideButtonController : MonoBehaviour
 {
-    ButtonTriggerController CurrentButtonTrigger;
+    List<ButtonTriggerController> CurrentButtonTriggers = new();
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (CurrentButtonTrigger != null)
+        if (CurrentButtonTriggers.Count() > 0)
         {
-            CurrentButtonTrigger.Trigger();
+            foreach (var trigger in CurrentButtonTriggers)
+            {
+                trigger.Trigger();
+            }
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+
         if (other.TryGetComponent(out ButtonTriggerController buttonTrigger))
         {
-            CurrentButtonTrigger = buttonTrigger;
+            if (!CurrentButtonTriggers.Contains(buttonTrigger))
+            {
+                CurrentButtonTriggers.Add(buttonTrigger);
+            }
         }
     }
 
@@ -25,10 +34,10 @@ public class CollideButtonController : MonoBehaviour
     {
         if (other.TryGetComponent(out ButtonTriggerController buttonTrigger))
         {
-            if (CurrentButtonTrigger == buttonTrigger)
+            if (CurrentButtonTriggers.Contains(buttonTrigger))
             {
-                CurrentButtonTrigger.Release();
-                CurrentButtonTrigger = null;
+                buttonTrigger.Release();
+                CurrentButtonTriggers.Remove(buttonTrigger);
             }
         }
     }
