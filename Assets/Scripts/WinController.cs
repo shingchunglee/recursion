@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class WinController : MonoBehaviour
 {
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,6 @@ public class WinController : MonoBehaviour
 
     public void win()
     {
-        SceneManager.LoadScene("LevelSelect");
+        animator.Play("win");
     }
 }

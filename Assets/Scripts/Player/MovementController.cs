@@ -15,6 +15,7 @@ public class MovementController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!GameManager.Instance.canMove) return;
         Vector3 movement = new Vector3(horizontalMovement, verticalMovement, 0).normalized;
         transform.Translate(movement * 2f * Time.deltaTime);
     }

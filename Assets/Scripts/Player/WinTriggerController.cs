@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class WinTriggerController : MonoBehaviour
 {
+    public AnimationStateController animationController;
+    public MovementController movementController;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,9 +20,10 @@ public class WinTriggerController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other);
-        if (other.TryGetComponent<WinController>(out WinController winController))
+        if (other.TryGetComponent(out WinController winController))
         {
+            animationController.OnWin();
+            GameManager.Instance.OnWin();
             winController.win();
         }
     }

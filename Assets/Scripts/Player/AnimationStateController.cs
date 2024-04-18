@@ -32,25 +32,25 @@ public class AnimationStateController : MonoBehaviour
 
     public void OnRun()
     {
-        if (currentState == runState) return;
+        if (currentState == runState || currentState == winState || currentState == deadState) return;
         ChangeState(runState);
     }
 
     public void OnIdle()
     {
-        if (currentState == idleState || currentState == idleSit) return;
+        if (currentState == idleState || currentState == idleSit || currentState == winState || currentState == deadState) return;
         ChangeState(idleState);
     }
 
     public void OnWin()
     {
-        if (currentState == winState) return;
+        if (currentState == winState || currentState == deadState) return;
         ChangeState(winState);
     }
 
     public void OnDeath()
     {
-        if (currentState == deadState) return;
+        if (currentState == winState || currentState == deadState) return;
         ChangeState(deadState);
     }
 }
