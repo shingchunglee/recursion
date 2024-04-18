@@ -7,6 +7,7 @@ public class DeathController : MonoBehaviour
     public AnimationStateController animationController;
     public MovementController movementController;
     private Vector3 startPos;
+    private bool canDie = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,11 +17,13 @@ public class DeathController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void Die()
     {
+        if (!canDie) return;
+        canDie = false;
         animationController.OnDeath();
         movementController.canMove = false;
         StartCoroutine(Respawn(3f));
@@ -32,5 +35,6 @@ public class DeathController : MonoBehaviour
         transform.position = startPos;
         animationController.ChangeState(animationController.idleState);
         movementController.canMove = true;
+        canDie = true;
     }
 }

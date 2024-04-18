@@ -11,10 +11,19 @@ public class InputManager : MonoBehaviour
     [SerializeField] UnityEvent ReleaseHorizontal;
     [SerializeField] UnityEvent ReleaseVertical;
     [SerializeField] UnityEvent ReleaseAll;
+    [SerializeField] UnityEvent DeleteDown;
     // Start is called before the first frame update
     void Start()
     {
 
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Delete))
+        {
+            DeleteDown.Invoke();
+        }
     }
 
     // Update is called once per frame
