@@ -6,7 +6,6 @@ public class CollideButtonController : MonoBehaviour
 {
     List<ButtonTriggerController> CurrentButtonTriggers = new();
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         if (CurrentButtonTriggers.Count() > 0)
@@ -20,9 +19,9 @@ public class CollideButtonController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-
         if (other.TryGetComponent(out ButtonTriggerController buttonTrigger))
         {
+            buttonTrigger.TriggerOnce();
             if (!CurrentButtonTriggers.Contains(buttonTrigger))
             {
                 CurrentButtonTriggers.Add(buttonTrigger);

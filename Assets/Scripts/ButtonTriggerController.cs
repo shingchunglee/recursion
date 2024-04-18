@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class ButtonTriggerController : MonoBehaviour
 {
     [SerializeField] UnityEvent OnTrigger;
+    [SerializeField] UnityEvent OnTriggerOnce;
     [SerializeField] UnityEvent OnRelease;
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,11 @@ public class ButtonTriggerController : MonoBehaviour
     public void Trigger()
     {
         OnTrigger.Invoke();
+    }
+
+    public void TriggerOnce()
+    {
+        OnTriggerOnce.Invoke();
     }
 
     public void Release()

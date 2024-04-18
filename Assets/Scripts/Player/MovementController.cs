@@ -7,15 +7,16 @@ public class MovementController : MonoBehaviour
     [SerializeField] SpriteRenderer spriteRenderer;
     private float horizontalMovement;
     private float verticalMovement;
+    public bool canMove = true;
     // Start is called before the first frame update
     void Start()
     {
-
+        canMove = true;
     }
 
     void FixedUpdate()
     {
-        if (!GameManager.Instance.canMove) return;
+        if (!GameManager.Instance.canMove || !canMove) return;
         Vector3 movement = new Vector3(horizontalMovement, verticalMovement, 0).normalized;
         transform.Translate(movement * 2f * Time.deltaTime);
     }
