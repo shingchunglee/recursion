@@ -38,4 +38,14 @@ public class GameManager : MonoBehaviour
     canMove = false;
     winCanvas.SetActive(true);
   }
+
+  public void UnlockAchievementDeathByDeletion()
+  {
+    AchievementManager.instance.Unlock("DeathByDeletion");
+  }
+
+  public void UnlockAchievementBabySteps()
+  {
+    AchievementManager.instance.Unlock("BabySteps");
+  }
 }
