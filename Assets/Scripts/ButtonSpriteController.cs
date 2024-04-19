@@ -4,8 +4,8 @@ public class ButtonSpriteController : MonoBehaviour
 {
 
     [SerializeField] SpriteRenderer spriteRenderer;
-    [SerializeField] Sprite ReleaseSprite;
-    [SerializeField] Sprite PressedSprite;
+    public Sprite ReleaseSprite;
+    public Sprite PressedSprite;
 
     public void OnPress()
     {

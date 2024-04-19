@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class DontDestroyMusic : MonoBehaviour
 {
     private GameObject musicPlayer;
     public AudioClip SoundClip;
-    void Awake()
+    public AudioMixerGroup audioMixerGroup;
+    public AudioMixer audioMixer;
+    void Start()
     {
         //When the scene loads it checks if there is an object called "MUSIC".
         musicPlayer = GameObject.FindWithTag("Music");
@@ -20,6 +23,11 @@ public class DontDestroyMusic : MonoBehaviour
             soundSource.loop = true;
             soundSource.clip = SoundClip;
             soundSource.Play();
+            soundSource.outputAudioMixerGroup = audioMixerGroup;
+
+            int playerPrefVolume = PlayerPrefs.GetInt("MusicVolume", 9);
+            float vol = playerPrefVolume / 9f;
+            audioMixer.SetFloat("MusicVol", (1 - Mathf.Sqrt(vol)) * -80f);
         }
     }
 }
