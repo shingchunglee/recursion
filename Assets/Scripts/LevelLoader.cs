@@ -27,9 +27,9 @@ public class LevelLoader : MonoBehaviour
         SceneManager.LoadScene("Level0-1");
     }
 
-    public void LoadLevel2()
+    public void LoadLevel10()
     {
-        SceneManager.LoadScene("Level2");
+        SceneManager.LoadScene("Level1-0");
     }
 
     public void LoadLevelSelect()

@@ -18,7 +18,8 @@ public class MovementController : MonoBehaviour
     {
         if (!GameManager.Instance.canMove || !canMove) return;
         Vector3 movement = new Vector3(horizontalMovement, verticalMovement, 0).normalized;
-        transform.Translate(movement * 2f * Time.deltaTime);
+
+        transform.Translate(movement * 2f * transform.localScale.x * Time.deltaTime);
     }
 
     public void MoveLeft()
