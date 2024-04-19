@@ -129,6 +129,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnTriggerOnce:
+    m_PersistentCalls:
+      m_Calls: []
   OnRelease:
     m_PersistentCalls:
       m_Calls:
@@ -144,6 +147,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  keySound: {fileID: 8300000, guid: f1b45f63a0218884ebf1033e24195ba6, type: 3}
 --- !u!61 &8703628534607502586
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -17,14 +17,14 @@ public class LevelLoader : MonoBehaviour
 
     }
 
-    public void LoadLevel0()
+    public void LoadLevel00()
     {
-        SceneManager.LoadScene("Level0");
+        SceneManager.LoadScene("Level0-0");
     }
 
-    public void LoadLevel1()
+    public void LoadLevel01()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Level0-1");
     }
 
     public void LoadLevel2()

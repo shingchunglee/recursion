@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
 
   public bool canMove = true;
   public GameObject winCanvas;
+  public PlaySoundController playSoundController;
 
   public void OnWin()
   {

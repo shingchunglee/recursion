@@ -1,0 +1,164 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5544918427101819143
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -1410878286501113864, guid: 0fcad78fb9fac56459917ecbff0cc580, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 03fa874e4c518c5438776d4218e34c8d, type: 3}
+    - target: {fileID: 1310960405336256534, guid: 0fcad78fb9fac56459917ecbff0cc580, type: 3}
+      propertyPath: PressedSprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310960405336256534, guid: 0fcad78fb9fac56459917ecbff0cc580, type: 3}
+      propertyPath: ReleaseSprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1403253011760978695, guid: 0fcad78fb9fac56459917ecbff0cc580, type: 3}
+      propertyPath: m_Name
+      value: ClickableButton Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 2247274652956528718, guid: 0fcad78fb9fac56459917ecbff0cc580, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.93556523
+      objectReference: {fileID: 0}
+    - target: {fileID: 2247274652956528718, guid: 0fcad78fb9fac56459917ecbff0cc580, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.6420553
+      objectReference: {fileID: 0}
+    - target: {fileID: 2247274652956528718, guid: 0fcad78fb9fac56459917ecbff0cc580, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9.93351
+      objectReference: {fileID: 0}
+    - target: {fileID: 2247274652956528718, guid: 0fcad78fb9fac56459917ecbff0cc580, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2247274652956528718, guid: 0fcad78fb9fac56459917ecbff0cc580, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2247274652956528718, guid: 0fcad78fb9fac56459917ecbff0cc580, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2247274652956528718, guid: 0fcad78fb9fac56459917ecbff0cc580, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2247274652956528718, guid: 0fcad78fb9fac56459917ecbff0cc580, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2247274652956528718, guid: 0fcad78fb9fac56459917ecbff0cc580, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2247274652956528718, guid: 0fcad78fb9fac56459917ecbff0cc580, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1403253011760978695, guid: 0fcad78fb9fac56459917ecbff0cc580, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8684293546813533808}
+  m_SourcePrefab: {fileID: 100100000, guid: 0fcad78fb9fac56459917ecbff0cc580, type: 3}
+--- !u!114 &6828290896975397137 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1310960405336256534, guid: 0fcad78fb9fac56459917ecbff0cc580, type: 3}
+  m_PrefabInstance: {fileID: 5544918427101819143}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6884555513924250112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1838427916322cc4292d0b9fe313b7fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &6884555513924250112 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1403253011760978695, guid: 0fcad78fb9fac56459917ecbff0cc580, type: 3}
+  m_PrefabInstance: {fileID: 5544918427101819143}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8684293546813533808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6884555513924250112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47e676e034f9aa4e9541636cc2995f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MouseDown:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6828290896975397137}
+        m_TargetAssemblyTypeName: ButtonSpriteController, Assembly-CSharp
+        m_MethodName: OnPress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  MouseUp:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6828290896975397137}
+        m_TargetAssemblyTypeName: ButtonSpriteController, Assembly-CSharp
+        m_MethodName: OnRelease
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  MouseEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6828290896975397137}
+        m_TargetAssemblyTypeName: ButtonSpriteController, Assembly-CSharp
+        m_MethodName: OnPress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  MouseExit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6828290896975397137}
+        m_TargetAssemblyTypeName: ButtonSpriteController, Assembly-CSharp
+        m_MethodName: OnRelease
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  isMouseOver: 0
+  keySound: {fileID: 8300000, guid: f1b45f63a0218884ebf1033e24195ba6, type: 3}
