@@ -9,25 +9,20 @@ public class ButtonTriggerController : MonoBehaviour
     [SerializeField] UnityEvent OnTriggerOnce;
     [SerializeField] UnityEvent OnRelease;
     public AudioClip keySound;
-    public bool released = true;
-
-    private void OnDisable()
+    // Start is called before the first frame update
+    void Start()
     {
-        released = true;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (released)
-        {
-            OnRelease.Invoke();
-        }
+
     }
 
     public void Trigger()
     {
-        released = false;
         OnTrigger.Invoke();
     }
 
@@ -39,7 +34,6 @@ public class ButtonTriggerController : MonoBehaviour
 
     public void Release()
     {
-        released = true;
-        // OnRelease.Invoke();
+        OnRelease.Invoke();
     }
 }

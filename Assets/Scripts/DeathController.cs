@@ -5,7 +5,6 @@ using UnityEngine;
 public class DeathController : MonoBehaviour
 {
     public AnimationStateController animationController;
-    public MovementController movementController;
     public NewMovementController newMovementController;
     private Vector3 startPos;
     private bool canDie = true;
@@ -26,7 +25,6 @@ public class DeathController : MonoBehaviour
         if (!canDie) return;
         canDie = false;
         animationController.OnDeath();
-        movementController.canMove = false;
         newMovementController.canMove = false;
         StartCoroutine(Respawn(3f));
     }
@@ -36,7 +34,6 @@ public class DeathController : MonoBehaviour
         yield return new WaitForSeconds(time);
         transform.position = startPos;
         animationController.ChangeState(animationController.idleState);
-        movementController.canMove = true;
         newMovementController.canMove = true;
         canDie = true;
     }

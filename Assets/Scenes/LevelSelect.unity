@@ -9160,11 +9160,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3712377186958432436, guid: ee2709152394b37489648c37e147c5d0, type: 3}
       propertyPath: OnTriggerOnce.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 3712377186958432436, guid: ee2709152394b37489648c37e147c5d0, type: 3}
       propertyPath: OnTriggerOnce.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: 
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 3712377186958432436, guid: ee2709152394b37489648c37e147c5d0, type: 3}
       propertyPath: OnTriggerOnce.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
@@ -9376,7 +9376,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8684293546813533808, guid: ee2709152394b37489648c37e147c5d0, type: 3}
       propertyPath: MouseUp.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: 
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 8684293546813533808, guid: ee2709152394b37489648c37e147c5d0, type: 3}
       propertyPath: MouseUp.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
@@ -9676,7 +9676,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 25dadf69d5a5b094189ae362891e721b, type: 3}
     - target: {fileID: 3712377186958432436, guid: ee2709152394b37489648c37e147c5d0, type: 3}
       propertyPath: OnTriggerOnce.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3712377186958432436, guid: ee2709152394b37489648c37e147c5d0, type: 3}
       propertyPath: OnTriggerOnce.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -9689,7 +9689,7 @@ PrefabInstance:
     - target: {fileID: 3712377186958432436, guid: ee2709152394b37489648c37e147c5d0, type: 3}
       propertyPath: OnTriggerOnce.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 54683401}
+      objectReference: {fileID: 1030212882}
     - target: {fileID: 3712377186958432436, guid: ee2709152394b37489648c37e147c5d0, type: 3}
       propertyPath: OnTriggerOnce.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -9704,15 +9704,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3712377186958432436, guid: ee2709152394b37489648c37e147c5d0, type: 3}
       propertyPath: OnTriggerOnce.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: ToggleAchievementsUI
       objectReference: {fileID: 0}
     - target: {fileID: 3712377186958432436, guid: ee2709152394b37489648c37e147c5d0, type: 3}
       propertyPath: OnTriggerOnce.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: 
+      value: ToggleAchievementsUI
       objectReference: {fileID: 0}
     - target: {fileID: 3712377186958432436, guid: ee2709152394b37489648c37e147c5d0, type: 3}
       propertyPath: OnTriggerOnce.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GameManager, Assembly-CSharp
+      value: ToggleAchievementUI, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3712377186958432436, guid: ee2709152394b37489648c37e147c5d0, type: 3}
       propertyPath: OnTriggerOnce.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -9804,7 +9804,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8684293546813533808, guid: ee2709152394b37489648c37e147c5d0, type: 3}
       propertyPath: MouseUp.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: 
+      value: ToggleAchievementsUI
       objectReference: {fileID: 0}
     - target: {fileID: 8684293546813533808, guid: ee2709152394b37489648c37e147c5d0, type: 3}
       propertyPath: MouseUp.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName

@@ -5,7 +5,6 @@ using UnityEngine;
 public class WinTriggerController : MonoBehaviour
 {
     public AnimationStateController animationController;
-    public MovementController movementController;
     // Start is called before the first frame update
     void Start()
     {

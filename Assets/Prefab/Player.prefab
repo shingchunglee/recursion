@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2505001301987839827}
   - component: {fileID: 2880425788989298399}
-  - component: {fileID: 5477139250994802981}
   - component: {fileID: 1197428127636116567}
   - component: {fileID: 6768684172339393832}
   - component: {fileID: 5830809770030898294}
@@ -93,20 +92,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5477139250994802981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4025588744256459255}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a46658c4391834643a117ea1926e0fb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 2880425788989298399}
-  canMove: 1
 --- !u!114 &1197428127636116567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,7 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationController: {fileID: 4840404957126480957}
-  movementController: {fileID: 5477139250994802981}
+  movementController: {fileID: 0}
 --- !u!50 &5830809770030898294
 Rigidbody2D:
   serializedVersion: 4
@@ -267,5 +252,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationController: {fileID: 4840404957126480957}
-  movementController: {fileID: 5477139250994802981}
+  movementController: {fileID: 0}
   newMovementController: {fileID: 1197428127636116567}
