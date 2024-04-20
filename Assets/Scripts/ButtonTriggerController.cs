@@ -9,6 +9,11 @@ public class ButtonTriggerController : MonoBehaviour
     [SerializeField] UnityEvent OnTriggerOnce;
     [SerializeField] UnityEvent OnRelease;
     public AudioClip keySound;
+
+    private void OnDisable()
+    {
+        OnRelease.Invoke();
+    }
     // Start is called before the first frame update
     void Start()
     {
