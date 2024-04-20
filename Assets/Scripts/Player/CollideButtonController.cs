@@ -21,11 +21,12 @@ public class CollideButtonController : MonoBehaviour
     {
         if (other.TryGetComponent(out ButtonTriggerController buttonTrigger))
         {
-            buttonTrigger.TriggerOnce();
+            ReliableOnTriggerExit2D.NotifyTriggerEnter(other, gameObject, OnTriggerExit2D);
             if (!CurrentButtonTriggers.Contains(buttonTrigger))
             {
                 CurrentButtonTriggers.Add(buttonTrigger);
             }
+            buttonTrigger.TriggerOnce();
         }
     }
 
@@ -33,10 +34,11 @@ public class CollideButtonController : MonoBehaviour
     {
         if (other.TryGetComponent(out ButtonTriggerController buttonTrigger))
         {
+            ReliableOnTriggerExit2D.NotifyTriggerExit(other, gameObject);
             if (CurrentButtonTriggers.Contains(buttonTrigger))
             {
-                buttonTrigger.Release();
                 CurrentButtonTriggers.Remove(buttonTrigger);
+                buttonTrigger.Release();
             }
         }
     }
