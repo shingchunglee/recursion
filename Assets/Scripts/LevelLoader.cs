@@ -32,6 +32,11 @@ public class LevelLoader : MonoBehaviour
         SceneManager.LoadScene("Level1-0");
     }
 
+    public void LoadLevel20()
+    {
+        SceneManager.LoadScene("Level2-0");
+    }
+
     public void LoadLevelSelect()
     {
         SceneManager.LoadScene("LevelSelect");
