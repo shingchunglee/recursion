@@ -3,16 +3,16 @@ using UnityEngine.Events;
 
 public class NewInputManager : MonoBehaviour
 {
-    [SerializeField] UnityEvent MoveLeft;
-    [SerializeField] UnityEvent MoveRight;
-    [SerializeField] UnityEvent MoveUp;
-    [SerializeField] UnityEvent MoveDown;
-    [SerializeField] UnityEvent ReleaseLeft;
-    [SerializeField] UnityEvent ReleaseRight;
-    [SerializeField] UnityEvent ReleaseUp;
-    [SerializeField] UnityEvent ReleaseDown;
-    [SerializeField] UnityEvent ReleaseAll;
-    [SerializeField] UnityEvent DeleteDown;
+    public UnityEvent MoveLeft;
+    public UnityEvent MoveRight;
+    public UnityEvent MoveUp;
+    public UnityEvent MoveDown;
+    public UnityEvent ReleaseLeft;
+    public UnityEvent ReleaseRight;
+    public UnityEvent ReleaseUp;
+    public UnityEvent ReleaseDown;
+    public UnityEvent ReleaseAll;
+    public UnityEvent DeleteDown;
 
 
     private void Update()

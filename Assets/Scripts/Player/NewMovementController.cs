@@ -7,6 +7,8 @@ public class NewMovementController : MonoBehaviour
     private float rightMovement;
     private float upMovement;
     private float downMovement;
+    public float horizontalMovement;
+    public float verticalMovement;
     public bool canMove = true;
     public float speed = 1f;
     // Start is called before the first frame update
@@ -18,8 +20,8 @@ public class NewMovementController : MonoBehaviour
     void FixedUpdate()
     {
         if (!GameManager.Instance.canMove || !canMove) return;
-        float horizontalMovement = rightMovement - leftMovement;
-        float verticalMovement = upMovement - downMovement;
+        horizontalMovement = rightMovement - leftMovement;
+        verticalMovement = upMovement - downMovement;
         Vector3 movement = new Vector3(horizontalMovement, verticalMovement, 0);
 
         transform.Translate(movement * speed * transform.localScale.x * Time.deltaTime);

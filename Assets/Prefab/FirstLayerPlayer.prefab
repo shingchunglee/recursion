@@ -42,8 +42,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7072032466828482478}
-  - component: {fileID: 4400405626606660284}
   - component: {fileID: 2640466263541095182}
+  - component: {fileID: 6284156124431968957}
   m_Layer: 0
   m_Name: InputManager
   m_TagString: Untagged
@@ -66,198 +66,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6649985255996999684}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4400405626606660284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5087196640052806656}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3146da60dda64e65af0c9b3701de00f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveLeft:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6155321163436411555}
-        m_TargetAssemblyTypeName: MovementController, Assembly-CSharp
-        m_MethodName: MoveLeft
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 6503814090533040059}
-        m_TargetAssemblyTypeName: AnimationStateController, Assembly-CSharp
-        m_MethodName: OnRun
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  MoveRight:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6155321163436411555}
-        m_TargetAssemblyTypeName: MovementController, Assembly-CSharp
-        m_MethodName: MoveRight
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 6503814090533040059}
-        m_TargetAssemblyTypeName: AnimationStateController, Assembly-CSharp
-        m_MethodName: OnRun
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  MoveUp:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6155321163436411555}
-        m_TargetAssemblyTypeName: MovementController, Assembly-CSharp
-        m_MethodName: MoveUp
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 6503814090533040059}
-        m_TargetAssemblyTypeName: AnimationStateController, Assembly-CSharp
-        m_MethodName: OnRun
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  MoveDown:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6155321163436411555}
-        m_TargetAssemblyTypeName: MovementController, Assembly-CSharp
-        m_MethodName: MoveDown
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 6503814090533040059}
-        m_TargetAssemblyTypeName: AnimationStateController, Assembly-CSharp
-        m_MethodName: OnRun
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  ReleaseHorizontal:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6155321163436411555}
-        m_TargetAssemblyTypeName: MovementController, Assembly-CSharp
-        m_MethodName: StopHorizontal
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  ReleaseVertical:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6155321163436411555}
-        m_TargetAssemblyTypeName: MovementController, Assembly-CSharp
-        m_MethodName: StopVertical
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  ReleaseAll:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6503814090533040059}
-        m_TargetAssemblyTypeName: AnimationStateController, Assembly-CSharp
-        m_MethodName: OnIdle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  DeleteDown:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1166467403457506732}
-        m_TargetAssemblyTypeName: DeathController, Assembly-CSharp
-        m_MethodName: Die
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: UnlockAchievementDeathByDeletion
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &2640466263541095182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,202 +80,46 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveLeft:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6503814090533040059}
-        m_TargetAssemblyTypeName: AnimationStateController, Assembly-CSharp
-        m_MethodName: OnRun
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 716279413980360657}
-        m_TargetAssemblyTypeName: NewMovementController, Assembly-CSharp
-        m_MethodName: MoveLeft
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   MoveRight:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6503814090533040059}
-        m_TargetAssemblyTypeName: AnimationStateController, Assembly-CSharp
-        m_MethodName: OnRun
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 716279413980360657}
-        m_TargetAssemblyTypeName: NewMovementController, Assembly-CSharp
-        m_MethodName: MoveRight
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   MoveUp:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6503814090533040059}
-        m_TargetAssemblyTypeName: AnimationStateController, Assembly-CSharp
-        m_MethodName: OnRun
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 716279413980360657}
-        m_TargetAssemblyTypeName: NewMovementController, Assembly-CSharp
-        m_MethodName: MoveUp
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   MoveDown:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6503814090533040059}
-        m_TargetAssemblyTypeName: AnimationStateController, Assembly-CSharp
-        m_MethodName: OnRun
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 716279413980360657}
-        m_TargetAssemblyTypeName: NewMovementController, Assembly-CSharp
-        m_MethodName: MoveDown
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   ReleaseLeft:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 716279413980360657}
-        m_TargetAssemblyTypeName: NewMovementController, Assembly-CSharp
-        m_MethodName: StopLeft
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   ReleaseRight:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 716279413980360657}
-        m_TargetAssemblyTypeName: NewMovementController, Assembly-CSharp
-        m_MethodName: StopRight
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   ReleaseUp:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 716279413980360657}
-        m_TargetAssemblyTypeName: NewMovementController, Assembly-CSharp
-        m_MethodName: StopUp
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   ReleaseDown:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 716279413980360657}
-        m_TargetAssemblyTypeName: NewMovementController, Assembly-CSharp
-        m_MethodName: StopDown
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   ReleaseAll:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6503814090533040059}
-        m_TargetAssemblyTypeName: AnimationStateController, Assembly-CSharp
-        m_MethodName: OnIdle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   DeleteDown:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1166467403457506732}
-        m_TargetAssemblyTypeName: DeathController, Assembly-CSharp
-        m_MethodName: Die
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &6284156124431968957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5087196640052806656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f74a3eb1de6a24a9d9f1e53fbbb9266e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1832581169832967046
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -531,14 +183,17 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4025588744256459255, guid: 8c1b379cc6e31cf42a6c116a92fa10c1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4148097122074010635}
   m_SourcePrefab: {fileID: 100100000, guid: 8c1b379cc6e31cf42a6c116a92fa10c1, type: 3}
 --- !u!114 &716279413980360657 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1197428127636116567, guid: 8c1b379cc6e31cf42a6c116a92fa10c1, type: 3}
   m_PrefabInstance: {fileID: 1832581169832967046}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 3365140545616816753}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b8690325e01123b4ab2354cd1927112a, type: 3}
@@ -549,12 +204,240 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 675185012452005418, guid: 8c1b379cc6e31cf42a6c116a92fa10c1, type: 3}
   m_PrefabInstance: {fileID: 1832581169832967046}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 3365140545616816753}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e7d3c5f20a214cef933449f48c759de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &3365140545616816753 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4025588744256459255, guid: 8c1b379cc6e31cf42a6c116a92fa10c1, type: 3}
+  m_PrefabInstance: {fileID: 1832581169832967046}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4148097122074010635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3365140545616816753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 515664010f7b0484bb22fd0543be0f15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputAssign:
+    inputAssignerController: {fileID: 6284156124431968957}
+    inputAction:
+    - unityEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 716279413980360657}
+            m_TargetAssemblyTypeName: NewMovementController, Assembly-CSharp
+            m_MethodName: MoveLeft
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 6503814090533040059}
+            m_TargetAssemblyTypeName: AnimationStateController, Assembly-CSharp
+            m_MethodName: OnRun
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      triggerType: 0
+    - unityEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 716279413980360657}
+            m_TargetAssemblyTypeName: NewMovementController, Assembly-CSharp
+            m_MethodName: MoveRight
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 6503814090533040059}
+            m_TargetAssemblyTypeName: AnimationStateController, Assembly-CSharp
+            m_MethodName: OnRun
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      triggerType: 1
+    - unityEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 716279413980360657}
+            m_TargetAssemblyTypeName: NewMovementController, Assembly-CSharp
+            m_MethodName: MoveUp
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 6503814090533040059}
+            m_TargetAssemblyTypeName: AnimationStateController, Assembly-CSharp
+            m_MethodName: OnRun
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      triggerType: 2
+    - unityEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 716279413980360657}
+            m_TargetAssemblyTypeName: NewMovementController, Assembly-CSharp
+            m_MethodName: MoveDown
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 6503814090533040059}
+            m_TargetAssemblyTypeName: AnimationStateController, Assembly-CSharp
+            m_MethodName: OnRun
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      triggerType: 3
+    - unityEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 716279413980360657}
+            m_TargetAssemblyTypeName: NewMovementController, Assembly-CSharp
+            m_MethodName: StopLeft
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      triggerType: 4
+    - unityEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 716279413980360657}
+            m_TargetAssemblyTypeName: NewMovementController, Assembly-CSharp
+            m_MethodName: StopRight
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      triggerType: 5
+    - unityEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 716279413980360657}
+            m_TargetAssemblyTypeName: NewMovementController, Assembly-CSharp
+            m_MethodName: StopUp
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      triggerType: 6
+    - unityEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 716279413980360657}
+            m_TargetAssemblyTypeName: NewMovementController, Assembly-CSharp
+            m_MethodName: StopDown
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      triggerType: 7
+    - unityEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 6503814090533040059}
+            m_TargetAssemblyTypeName: AnimationStateController, Assembly-CSharp
+            m_MethodName: OnIdle
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      triggerType: 8
+    - unityEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1166467403457506732}
+            m_TargetAssemblyTypeName: DeathController, Assembly-CSharp
+            m_MethodName: Die
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      triggerType: 9
 --- !u!4 &4300145670139344085 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2505001301987839827, guid: 8c1b379cc6e31cf42a6c116a92fa10c1, type: 3}
@@ -565,23 +448,12 @@ SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 2880425788989298399, guid: 8c1b379cc6e31cf42a6c116a92fa10c1, type: 3}
   m_PrefabInstance: {fileID: 1832581169832967046}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6155321163436411555 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5477139250994802981, guid: 8c1b379cc6e31cf42a6c116a92fa10c1, type: 3}
-  m_PrefabInstance: {fileID: 1832581169832967046}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a46658c4391834643a117ea1926e0fb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6503814090533040059 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4840404957126480957, guid: 8c1b379cc6e31cf42a6c116a92fa10c1, type: 3}
   m_PrefabInstance: {fileID: 1832581169832967046}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 3365140545616816753}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e74e02639010d543a0097efcb5f6ff1, type: 3}

@@ -5,9 +5,9 @@ using UnityEngine.Events;
 
 public class ButtonTriggerController : MonoBehaviour
 {
-    [SerializeField] UnityEvent OnTrigger;
-    [SerializeField] UnityEvent OnTriggerOnce;
-    [SerializeField] UnityEvent OnRelease;
+    public UnityEvent OnTrigger;
+    public UnityEvent OnTriggerOnce;
+    public UnityEvent OnRelease;
     public AudioClip keySound;
     // Start is called before the first frame update
     void Start()

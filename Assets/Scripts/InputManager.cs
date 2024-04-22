@@ -4,14 +4,14 @@ using UnityEngine.Events;
 
 public class InputManager : MonoBehaviour
 {
-    [SerializeField] UnityEvent MoveLeft;
-    [SerializeField] UnityEvent MoveRight;
-    [SerializeField] UnityEvent MoveUp;
-    [SerializeField] UnityEvent MoveDown;
-    [SerializeField] UnityEvent ReleaseHorizontal;
-    [SerializeField] UnityEvent ReleaseVertical;
-    [SerializeField] UnityEvent ReleaseAll;
-    [SerializeField] UnityEvent DeleteDown;
+    public UnityEvent MoveLeft;
+    public UnityEvent MoveRight;
+    public UnityEvent MoveUp;
+    public UnityEvent MoveDown;
+    public UnityEvent ReleaseHorizontal;
+    public UnityEvent ReleaseVertical;
+    public UnityEvent ReleaseAll;
+    public UnityEvent DeleteDown;
     // Start is called before the first frame update
     void Start()
     {
