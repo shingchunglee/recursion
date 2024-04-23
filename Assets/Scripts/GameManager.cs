@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -28,6 +29,8 @@ public class GameManager : MonoBehaviour
     instance = this;
 
     canMove = true;
+
+    levelLoader = GetComponent<LevelLoader>();
   }
 
   private void Start()
@@ -41,7 +44,11 @@ public class GameManager : MonoBehaviour
 
   public bool canMove = true;
   public GameObject winCanvas;
+  public GameObject pauseCanvas;
   public PlaySoundController playSoundController;
+  public LevelLoader levelLoader;
+
+  public bool paused = false;
 
   public void OnWin()
   {
@@ -61,6 +68,20 @@ public class GameManager : MonoBehaviour
 
   public void ReloadScene()
   {
-    UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+    levelLoader.ReloadLevel();
+  }
+
+  public void Pause()
+  {
+    paused = true;
+    canMove = false;
+    pauseCanvas.SetActive(true);
+  }
+
+  public void Resume()
+  {
+    paused = false;
+    canMove = true;
+    pauseCanvas.SetActive(false);
   }
 }
