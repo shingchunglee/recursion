@@ -30,6 +30,15 @@ public class GameManager : MonoBehaviour
     canMove = true;
   }
 
+  private void Start()
+  {
+    foreach (GameObject player in GameObject.FindGameObjectsWithTag("Player"))
+    {
+      player.GetComponent<EasierInputAssignController>()?.Assign();
+      player.GetComponent<EasierButtonAssignController>()?.Assign();
+    }
+  }
+
   public bool canMove = true;
   public GameObject winCanvas;
   public PlaySoundController playSoundController;
@@ -48,5 +57,10 @@ public class GameManager : MonoBehaviour
   public void UnlockAchievementBabySteps()
   {
     AchievementManager.instance.Unlock("BabySteps");
+  }
+
+  public void ReloadScene()
+  {
+    UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
   }
 }

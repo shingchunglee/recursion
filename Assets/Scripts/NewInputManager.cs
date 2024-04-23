@@ -52,6 +52,10 @@ public class NewInputManager : MonoBehaviour
         {
             ReleaseDown.Invoke();
         }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            GameManager.Instance.ReloadScene();
+        }
 
         if (
             !Input.GetKey(KeyCode.LeftArrow)

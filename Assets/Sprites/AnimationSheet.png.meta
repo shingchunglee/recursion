@@ -139,10 +139,10 @@ TextureImporter:
       name: AnimationSheet_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 7
         y: 120
-        width: 24
-        height: 24
+        width: 10
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,10 +160,10 @@ TextureImporter:
       name: AnimationSheet_1
       rect:
         serializedVersion: 2
-        x: 24
+        x: 31
         y: 120
-        width: 24
-        height: 24
+        width: 10
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,10 +181,10 @@ TextureImporter:
       name: AnimationSheet_2
       rect:
         serializedVersion: 2
-        x: 48
+        x: 55
         y: 120
-        width: 24
-        height: 24
+        width: 10
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,10 +202,10 @@ TextureImporter:
       name: AnimationSheet_3
       rect:
         serializedVersion: 2
-        x: 72
+        x: 79
         y: 120
-        width: 24
-        height: 24
+        width: 12
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,10 +223,10 @@ TextureImporter:
       name: AnimationSheet_4
       rect:
         serializedVersion: 2
-        x: 96
-        y: 120
-        width: 24
-        height: 24
+        x: 103
+        y: 117
+        width: 10
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,10 +244,10 @@ TextureImporter:
       name: AnimationSheet_5
       rect:
         serializedVersion: 2
-        x: 120
-        y: 120
-        width: 24
-        height: 24
+        x: 127
+        y: 121
+        width: 11
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,10 +265,10 @@ TextureImporter:
       name: AnimationSheet_6
       rect:
         serializedVersion: 2
-        x: 144
+        x: 150
         y: 120
-        width: 24
-        height: 24
+        width: 11
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -286,10 +286,10 @@ TextureImporter:
       name: AnimationSheet_7
       rect:
         serializedVersion: 2
-        x: 168
+        x: 175
         y: 120
-        width: 24
-        height: 24
+        width: 10
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -307,10 +307,10 @@ TextureImporter:
       name: AnimationSheet_8
       rect:
         serializedVersion: 2
-        x: 0
-        y: 96
-        width: 24
-        height: 24
+        x: 7
+        y: 95
+        width: 10
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -328,10 +328,10 @@ TextureImporter:
       name: AnimationSheet_9
       rect:
         serializedVersion: 2
-        x: 24
+        x: 31
         y: 96
-        width: 24
-        height: 24
+        width: 10
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -349,10 +349,10 @@ TextureImporter:
       name: AnimationSheet_10
       rect:
         serializedVersion: 2
-        x: 48
-        y: 96
-        width: 24
-        height: 24
+        x: 55
+        y: 95
+        width: 10
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -370,10 +370,10 @@ TextureImporter:
       name: AnimationSheet_11
       rect:
         serializedVersion: 2
-        x: 72
+        x: 79
         y: 96
-        width: 24
-        height: 24
+        width: 10
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -391,10 +391,10 @@ TextureImporter:
       name: AnimationSheet_12
       rect:
         serializedVersion: 2
-        x: 96
-        y: 96
-        width: 24
-        height: 24
+        x: 103
+        y: 95
+        width: 11
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -412,10 +412,10 @@ TextureImporter:
       name: AnimationSheet_13
       rect:
         serializedVersion: 2
-        x: 120
+        x: 127
         y: 96
-        width: 24
-        height: 24
+        width: 11
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -433,10 +433,10 @@ TextureImporter:
       name: AnimationSheet_14
       rect:
         serializedVersion: 2
-        x: 144
-        y: 96
-        width: 24
-        height: 24
+        x: 152
+        y: 95
+        width: 10
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -454,10 +454,10 @@ TextureImporter:
       name: AnimationSheet_15
       rect:
         serializedVersion: 2
-        x: 168
+        x: 176
         y: 96
-        width: 24
-        height: 24
+        width: 10
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -475,10 +475,10 @@ TextureImporter:
       name: AnimationSheet_16
       rect:
         serializedVersion: 2
-        x: 0
-        y: 72
-        width: 24
-        height: 24
+        x: 7
+        y: 71
+        width: 11
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -496,10 +496,10 @@ TextureImporter:
       name: AnimationSheet_17
       rect:
         serializedVersion: 2
-        x: 24
+        x: 32
         y: 72
-        width: 24
-        height: 24
+        width: 10
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -517,10 +517,10 @@ TextureImporter:
       name: AnimationSheet_18
       rect:
         serializedVersion: 2
-        x: 48
-        y: 72
-        width: 24
-        height: 24
+        x: 56
+        y: 71
+        width: 10
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -538,10 +538,10 @@ TextureImporter:
       name: AnimationSheet_19
       rect:
         serializedVersion: 2
-        x: 72
+        x: 80
         y: 72
-        width: 24
-        height: 24
+        width: 10
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -559,10 +559,10 @@ TextureImporter:
       name: AnimationSheet_20
       rect:
         serializedVersion: 2
-        x: 96
-        y: 72
-        width: 24
-        height: 24
+        x: 102
+        y: 71
+        width: 11
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -580,10 +580,10 @@ TextureImporter:
       name: AnimationSheet_21
       rect:
         serializedVersion: 2
-        x: 120
+        x: 126
         y: 72
-        width: 24
-        height: 24
+        width: 10
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -601,10 +601,10 @@ TextureImporter:
       name: AnimationSheet_22
       rect:
         serializedVersion: 2
-        x: 144
-        y: 72
-        width: 24
-        height: 24
+        x: 150
+        y: 71
+        width: 10
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -622,10 +622,10 @@ TextureImporter:
       name: AnimationSheet_23
       rect:
         serializedVersion: 2
-        x: 168
+        x: 174
         y: 72
-        width: 24
-        height: 24
+        width: 10
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -643,10 +643,10 @@ TextureImporter:
       name: AnimationSheet_24
       rect:
         serializedVersion: 2
-        x: 0
-        y: 48
-        width: 24
-        height: 24
+        x: 7
+        y: 47
+        width: 10
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -664,10 +664,10 @@ TextureImporter:
       name: AnimationSheet_25
       rect:
         serializedVersion: 2
-        x: 24
-        y: 48
-        width: 24
-        height: 24
+        x: 31
+        y: 45
+        width: 10
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -685,10 +685,10 @@ TextureImporter:
       name: AnimationSheet_26
       rect:
         serializedVersion: 2
-        x: 48
-        y: 48
-        width: 24
-        height: 24
+        x: 55
+        y: 49
+        width: 10
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -706,10 +706,10 @@ TextureImporter:
       name: AnimationSheet_27
       rect:
         serializedVersion: 2
-        x: 72
-        y: 48
-        width: 24
-        height: 24
+        x: 79
+        y: 51
+        width: 10
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -727,10 +727,10 @@ TextureImporter:
       name: AnimationSheet_28
       rect:
         serializedVersion: 2
-        x: 96
-        y: 48
-        width: 24
-        height: 24
+        x: 103
+        y: 49
+        width: 10
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -748,10 +748,10 @@ TextureImporter:
       name: AnimationSheet_29
       rect:
         serializedVersion: 2
-        x: 120
-        y: 48
-        width: 24
-        height: 24
+        x: 127
+        y: 47
+        width: 10
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -769,10 +769,10 @@ TextureImporter:
       name: AnimationSheet_30
       rect:
         serializedVersion: 2
-        x: 144
-        y: 48
-        width: 24
-        height: 24
+        x: 151
+        y: 45
+        width: 10
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -790,10 +790,10 @@ TextureImporter:
       name: AnimationSheet_31
       rect:
         serializedVersion: 2
-        x: 168
-        y: 48
-        width: 24
-        height: 24
+        x: 175
+        y: 47
+        width: 10
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -811,10 +811,10 @@ TextureImporter:
       name: AnimationSheet_32
       rect:
         serializedVersion: 2
-        x: 0
-        y: 24
-        width: 24
-        height: 24
+        x: 7
+        y: 21
+        width: 10
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -832,10 +832,10 @@ TextureImporter:
       name: AnimationSheet_33
       rect:
         serializedVersion: 2
-        x: 24
-        y: 24
-        width: 24
-        height: 24
+        x: 31
+        y: 23
+        width: 10
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -853,10 +853,10 @@ TextureImporter:
       name: AnimationSheet_34
       rect:
         serializedVersion: 2
-        x: 48
-        y: 24
-        width: 24
-        height: 24
+        x: 55
+        y: 25
+        width: 10
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -874,10 +874,10 @@ TextureImporter:
       name: AnimationSheet_35
       rect:
         serializedVersion: 2
-        x: 72
+        x: 79
         y: 24
-        width: 24
-        height: 24
+        width: 10
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -895,10 +895,10 @@ TextureImporter:
       name: AnimationSheet_36
       rect:
         serializedVersion: 2
-        x: 96
+        x: 103
         y: 24
-        width: 24
-        height: 24
+        width: 10
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -916,10 +916,10 @@ TextureImporter:
       name: AnimationSheet_37
       rect:
         serializedVersion: 2
-        x: 120
+        x: 128
         y: 24
-        width: 24
-        height: 24
+        width: 10
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -937,10 +937,10 @@ TextureImporter:
       name: AnimationSheet_38
       rect:
         serializedVersion: 2
-        x: 144
+        x: 152
         y: 24
-        width: 24
-        height: 24
+        width: 13
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -958,10 +958,10 @@ TextureImporter:
       name: AnimationSheet_39
       rect:
         serializedVersion: 2
-        x: 168
-        y: 24
-        width: 24
-        height: 24
+        x: 176
+        y: 23
+        width: 15
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -979,10 +979,10 @@ TextureImporter:
       name: AnimationSheet_40
       rect:
         serializedVersion: 2
-        x: 0
+        x: 7
         y: 0
-        width: 24
-        height: 24
+        width: 10
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1000,10 +1000,10 @@ TextureImporter:
       name: AnimationSheet_41
       rect:
         serializedVersion: 2
-        x: 24
+        x: 31
         y: 0
-        width: 24
-        height: 24
+        width: 12
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1013,27 +1013,6 @@ TextureImporter:
       bones: []
       spriteID: 7931361e1d4c5be48a34ccc6a8b07584
       internalID: -1100830504
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AnimationSheet_42
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 0
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dc8a4cf83a7aed649aa3d7c3e4bab326
-      internalID: 925345953
       vertices: []
       indices: 
       edges: []
@@ -1086,7 +1065,6 @@ TextureImporter:
       AnimationSheet_4: -1711452455
       AnimationSheet_40: 543831433
       AnimationSheet_41: -1100830504
-      AnimationSheet_42: 925345953
       AnimationSheet_5: 2036489728
       AnimationSheet_6: -881059411
       AnimationSheet_7: 1734326443

@@ -22,7 +22,6 @@ public class EasierButtonAssignController : MonoBehaviour
 
   private void Start()
   {
-    Assign();
   }
 
   public void Assign()

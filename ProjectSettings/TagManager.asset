@@ -48,6 +48,12 @@ TagManager:
   - name: Player
     uniqueID: 2088650343
     locked: 0
+  - name: TeleportIn
+    uniqueID: 3285948765
+    locked: 0
+  - name: TeleportOut
+    uniqueID: 1257131047
+    locked: 0
   - name: Goal
     uniqueID: 3627460267
     locked: 0

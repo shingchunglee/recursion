@@ -17,7 +17,7 @@ public class InputAssignerController : MonoBehaviour
   }
   private NewInputManager inputManager;
 
-  private void Start()
+  private void Awake()
   {
     inputManager = GetComponentInChildren<NewInputManager>();
   }

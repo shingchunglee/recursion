@@ -10,7 +10,7 @@ public class ButtonAssignerController : MonoBehaviour
   }
   private ButtonTriggerController[] buttonTriggerControllers;
 
-  private void Start()
+  private void Awake()
   {
     buttonTriggerControllers = GetComponentsInChildren<ButtonTriggerController>();
   }

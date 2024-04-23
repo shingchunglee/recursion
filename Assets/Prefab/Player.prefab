@@ -20,9 +20,10 @@ GameObject:
   - component: {fileID: 675185012452005418}
   - component: {fileID: 8530932037044532155}
   - component: {fileID: 8140568307184491273}
+  - component: {fileID: 8047997327079491540}
   m_Layer: 3
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,6 +108,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 2880425788989298399}
+  leftMovement: 0
+  rightMovement: 0
+  upMovement: 0
+  downMovement: 0
+  horizontalMovement: 0
+  verticalMovement: 0
   canMove: 1
   speed: 2
 --- !u!114 &6768684172339393832
@@ -147,7 +154,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &7190536607915127766
 BoxCollider2D:
@@ -164,7 +171,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -181,18 +188,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0040175915, y: -0.33610082}
+  m_Offset: {x: 0.0009469986, y: 0.0064516068}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.41666666, y: 0.7083333}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.427361, y: 0.34063673}
+  m_Size: {x: 0.4372902, y: 0.72787}
   m_EdgeRadius: 0
 --- !u!95 &7154622649445594841
 Animator:
@@ -254,6 +261,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animationController: {fileID: 4840404957126480957}
   newMovementController: {fileID: 1197428127636116567}
+  startPos: {x: 0, y: 0, z: 0}
+  original: 1
 --- !u!114 &8530932037044532155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,5 +285,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 42910a17de6ec46069783444488c99e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTeleportingIn: 0
+  isTeleportingOut: 0
+  teleportingObjects: []
+--- !u!114 &8047997327079491540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4025588744256459255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f99e9ad1fcf1c4dff9dc9c30aed0a845, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

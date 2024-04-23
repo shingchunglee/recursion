@@ -22,7 +22,6 @@ public class EasierInputAssignController : MonoBehaviour
 
   private void Start()
   {
-    Assign();
   }
 
   public void Assign()

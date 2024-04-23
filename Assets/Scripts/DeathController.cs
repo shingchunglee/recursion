@@ -6,8 +6,10 @@ public class DeathController : MonoBehaviour
 {
     public AnimationStateController animationController;
     public NewMovementController newMovementController;
-    private Vector3 startPos;
+    public Vector3 startPos;
     private bool canDie = true;
+
+    public bool original = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +28,14 @@ public class DeathController : MonoBehaviour
         canDie = false;
         animationController.OnDeath();
         newMovementController.canMove = false;
-        StartCoroutine(Respawn(3f));
+        if (original)
+        {
+            StartCoroutine(Respawn(3f));
+        }
+        else
+        {
+            StartCoroutine(RemoveIn(3f));
+        }
     }
 
     IEnumerator Respawn(float time)
@@ -36,5 +45,11 @@ public class DeathController : MonoBehaviour
         animationController.ChangeState(animationController.idleState);
         newMovementController.canMove = true;
         canDie = true;
+    }
+
+    IEnumerator RemoveIn(float time)
+    {
+        yield return new WaitForSeconds(time);
+        Destroy(gameObject);
     }
 }
