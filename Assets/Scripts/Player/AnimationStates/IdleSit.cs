@@ -1,5 +1,10 @@
 public class IdleSit : BaseAnimationState
 {
+    public override string GetName()
+    {
+        return "IdleSit";
+    }
+
     public override void OnEnterState(AnimationStateController controller)
     {
         controller.animator.Play("sit");

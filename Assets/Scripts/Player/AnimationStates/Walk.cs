@@ -1,5 +1,10 @@
 public class Walk : BaseAnimationState
 {
+    public override string GetName()
+    {
+        return "Walk";
+    }
+
     public override void OnEnterState(AnimationStateController controller)
     {
         controller.animator.Play("walk");

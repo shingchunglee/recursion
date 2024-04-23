@@ -4,6 +4,12 @@ using UnityEngine;
 public class Idle : BaseAnimationState
 {
     private Coroutine coroutine;
+
+    public override string GetName()
+    {
+        return "Idle";
+    }
+
     public override void OnEnterState(AnimationStateController controller)
     {
         controller.animator.Play("idle");
@@ -12,6 +18,7 @@ public class Idle : BaseAnimationState
 
     public override void OnExitState(AnimationStateController controller)
     {
+        Debug.Log("exit idle" + coroutine);
         controller.StopCoroutine(coroutine);
     }
 

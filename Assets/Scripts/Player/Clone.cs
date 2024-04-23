@@ -28,6 +28,8 @@ public class Clone : MonoBehaviour
     newMovementController.leftMovement = original.newMovementController.leftMovement;
     newMovementController.rightMovement = original.newMovementController.rightMovement;
 
+    animationStateController.ChangeState(animationStateController.GetStateByName(original.animationStateController.currentState.GetName()));
+
     deathController.startPos = original.deathController.startPos;
 
     EasierButtonAssignController easierButtonAssignController = GetComponent<EasierButtonAssignController>();
