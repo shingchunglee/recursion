@@ -48,15 +48,14 @@ public class TeleportOutController : MonoBehaviour
     teleported.name = gameObject.name;
 
     gameObject.GetComponentInChildren<TeleportableController>().teleportingObjects.Add(teleported);
-
-    teleported.transform.localScale = transform.localScale / ratio;
+    teleported.GetComponentInChildren<TeleportableController>().teleportingObjects.Clear();
 
     // teleportPos = Quaternion.Euler(0, 0, -transform.rotation.z) * teleportPos;
-    teleportPos = RotatePointAroundPivot(teleportPos, Vector3.zero, -transform.rotation.eulerAngles);
+    teleportPos = RotatePointAroundPivot(teleportPos / ratio, Vector3.zero, -transform.rotation.eulerAngles);
 
     teleported.transform.position = new Vector3(transform.position.x + -teleportPos.x, transform.position.y + teleportPos.y);
-    teleported.transform.rotation = Quaternion.Euler(inputEulerAngles - transform.rotation.eulerAngles + teleported.transform.rotation.eulerAngles);
-    teleported.transform.localScale = gameObject.transform.localScale;
+    teleported.transform.rotation = Quaternion.Euler(inputEulerAngles + transform.rotation.eulerAngles + teleported.transform.rotation.eulerAngles);
+    teleported.transform.localScale = gameObject.transform.localScale / ratio;
 
     teleported.GetComponent<TeleportableController>().isTeleportingOut = true;
     teleported.GetComponent<SpriteRenderer>().sortingLayerName = "TeleportOut";

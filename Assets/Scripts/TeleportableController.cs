@@ -67,15 +67,15 @@ public class TeleportableController : MonoBehaviour
     {
       contactPoints.Add(topLeft);
     }
-    if (bounds.Contains(topRight - new Vector2(0.05f, 0.05f)))
+    if (bounds.Contains(topRight - new Vector2(-0.05f, 0.05f)))
     {
       contactPoints.Add(topRight);
     }
-    if (bounds.Contains(bottomLeft - new Vector2(0.05f, 0.05f)))
+    if (bounds.Contains(bottomLeft - new Vector2(0.05f, -0.05f)))
     {
       contactPoints.Add(bottomLeft);
     }
-    if (bounds.Contains(bottomRight - new Vector2(0.05f, 0.05f)))
+    if (bounds.Contains(bottomRight - new Vector2(-0.05f, -0.05f)))
     {
       contactPoints.Add(bottomRight);
     }
