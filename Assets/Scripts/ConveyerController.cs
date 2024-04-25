@@ -13,7 +13,7 @@ public class ConveyerController : MonoBehaviour
         Right
     }
 
-    [SerializeField] Direction direction;
+    public Direction direction;
 
     private void Start()
     {

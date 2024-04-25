@@ -5,6 +5,7 @@ using UnityEngine;
 public class CollideConveyerController : MonoBehaviour
 {
     NewMovementController movementController;
+    public bool[] moving = new bool[4]; // TOP, BOTTOM, LEFT, RIGHT
 
     private void Start()
     {

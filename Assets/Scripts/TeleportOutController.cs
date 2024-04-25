@@ -46,6 +46,7 @@ public class TeleportOutController : MonoBehaviour
   {
     var teleported = Instantiate(gameObject);
     teleported.name = gameObject.name;
+    teleported.transform.parent = gameObject.transform.parent;
 
     gameObject.GetComponentInChildren<TeleportableController>().teleportingObjects.Add(teleported);
     teleported.GetComponentInChildren<TeleportableController>().teleportingObjects.Clear();
@@ -67,6 +68,7 @@ public class TeleportOutController : MonoBehaviour
       deathController.original = original;
     }
   }
+
 
   public Vector3 RotatePointAroundPivot(Vector3 point, Vector3 pivot, Vector3 angles)
   {
