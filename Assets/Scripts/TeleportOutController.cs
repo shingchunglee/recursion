@@ -61,9 +61,11 @@ public class TeleportOutController : MonoBehaviour
     teleported.GetComponent<SpriteRenderer>().sortingLayerName = "TeleportOut";
     teleported.GetComponent<BoxCollider2D>().excludeLayers = LayerMask.GetMask("TeleportOut");
 
-    teleported.GetComponent<DeathController>().original = original;
-
-    teleported.GetComponent<Clone>().ClonePlayer(gameObject.GetComponent<Clone>());
+    DeathController deathController = teleported.GetComponent<DeathController>();
+    if (deathController != null)
+    {
+      deathController.original = original;
+    }
   }
 
   public Vector3 RotatePointAroundPivot(Vector3 point, Vector3 pivot, Vector3 angles)

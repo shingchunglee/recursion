@@ -11,6 +11,8 @@ public class TeleportableController : MonoBehaviour
   public bool isTeleportingOut = false;
 
   public List<GameObject> teleportingObjects = new();
+  private Vector3 LastPos;
+  private Vector3 LastRotation;
 
   private string originalSortingLayer;
   private bool isDestroyed = false;
@@ -25,10 +27,11 @@ public class TeleportableController : MonoBehaviour
   {
     originalSortingLayer = spriteRenderer.sortingLayerName;
     boxCollider2D.excludeLayers = LayerMask.GetMask("TeleportOut");
+    LastPos = transform.position;
+    LastRotation = transform.rotation.eulerAngles;
     isTeleportingIn = true;
     spriteRenderer.sortingLayerName = "TeleportIn";
     spriteRenderer.maskInteraction = SpriteMaskInteraction.VisibleOutsideMask;
-
   }
 
 
@@ -57,10 +60,10 @@ public class TeleportableController : MonoBehaviour
   private Vector3[] GetContactPoints(BoxCollider2D boxCollider2D, Bounds bounds)
   {
     Bounds boxBounds = boxCollider2D.bounds;
-    Vector2 topLeft = new Vector2(boxBounds.center.x - boxBounds.extents.x, boxBounds.center.y + boxBounds.extents.y);
-    Vector2 topRight = new Vector2(boxBounds.center.x + boxBounds.extents.x, boxBounds.center.y + boxBounds.extents.y);
-    Vector2 bottomLeft = new Vector2(boxBounds.center.x - boxBounds.extents.x, boxBounds.center.y - boxBounds.extents.y);
-    Vector2 bottomRight = new Vector2(boxBounds.center.x + boxBounds.extents.x, boxBounds.center.y - boxBounds.extents.y);
+    Vector2 topLeft = new(boxBounds.center.x - boxBounds.extents.x, boxBounds.center.y + boxBounds.extents.y);
+    Vector2 topRight = new(boxBounds.center.x + boxBounds.extents.x, boxBounds.center.y + boxBounds.extents.y);
+    Vector2 bottomLeft = new(boxBounds.center.x - boxBounds.extents.x, boxBounds.center.y - boxBounds.extents.y);
+    Vector2 bottomRight = new(boxBounds.center.x + boxBounds.extents.x, boxBounds.center.y - boxBounds.extents.y);
 
     List<Vector3> contactPoints = new();
     if (bounds.Contains(topLeft - new Vector2(0.05f, 0.05f)))
@@ -87,10 +90,52 @@ public class TeleportableController : MonoBehaviour
   {
     if (other.TryGetComponent(out TeleportController teleportController))
     {
-      if (isTeleportingIn && WithinBounds(boxCollider2D.bounds, teleportController.GetMaskBounds()))
+      if (isTeleportingIn)
       {
-        isDestroyed = true;
-        Destroy(gameObject);
+        Bounds boxBounds = boxCollider2D.bounds;
+        Vector3 topLeft = new(boxBounds.center.x - boxBounds.extents.x, boxBounds.center.y + boxBounds.extents.y);
+        Vector3 topRight = new(boxBounds.center.x + boxBounds.extents.x, boxBounds.center.y + boxBounds.extents.y);
+        Vector3 bottomLeft = new(boxBounds.center.x - boxBounds.extents.x, boxBounds.center.y - boxBounds.extents.y);
+        Vector3 bottomRight = new(boxBounds.center.x + boxBounds.extents.x, boxBounds.center.y - boxBounds.extents.y);
+
+        if (
+          !IsOnRight(topLeft - teleportController.teleportEdge.position, teleportController)
+          && !IsOnRight(topRight - teleportController.teleportEdge.position, teleportController)
+          && !IsOnRight(bottomLeft - teleportController.teleportEdge.position, teleportController)
+          && !IsOnRight(bottomRight - teleportController.teleportEdge.position, teleportController)
+        )
+        {
+          isDestroyed = true;
+          Destroy(gameObject);
+        }
+
+        // if (WithinBounds(boxCollider2D.bounds, teleportController.GetMaskBounds()))
+        // {
+        //   isDestroyed = true;
+        //   Destroy(gameObject);
+        // }
+        if (LastPos != transform.position)
+        {
+          Vector3 delta = transform.position - LastPos;
+          foreach (var item in teleportingObjects)
+          {
+            item.transform.position += RotatePointAroundPivot(
+              delta,
+              Vector3.zero,
+              item.transform.rotation.eulerAngles - transform.rotation.eulerAngles
+            );
+          }
+          LastPos = transform.position;
+        }
+        if (LastRotation != transform.rotation.eulerAngles)
+        {
+          Vector3 delta = transform.rotation.eulerAngles - LastRotation;
+          foreach (var item in teleportingObjects)
+          {
+            item.transform.rotation = Quaternion.Euler(item.transform.rotation.eulerAngles + delta);
+          }
+          LastRotation = transform.rotation.eulerAngles;
+        }
       }
     }
   }
@@ -110,10 +155,10 @@ public class TeleportableController : MonoBehaviour
       UnTeleport();
     }
 
-    if (isTeleportingOut && other.gameObject.TryGetComponent(out TeleportOutController teleportOutController))
-    {
-      UnTeleport();
-    }
+    // if (isTeleportingOut && other.gameObject.TryGetComponent(out TeleportOutController teleportOutController))
+    // {
+    //   UnTeleport();
+    // }
   }
 
   private bool IsWithinTeleporter(TeleportController teleportController, BoxCollider2D boxCollider2D)
@@ -154,6 +199,14 @@ public class TeleportableController : MonoBehaviour
 
   private void UnTeleport()
   {
+    foreach (var item in teleportingObjects)
+    {
+      if (item.TryGetComponent(out Clone clone))
+      {
+        clone.ClonePlayer(gameObject.GetComponent<Clone>());
+      }
+      item.GetComponent<TeleportableController>().UnTeleport();
+    }
     spriteRenderer.sortingLayerName = originalSortingLayer;
     boxCollider2D.excludeLayers = LayerMask.GetMask();
     isTeleportingIn = false;
@@ -164,5 +217,13 @@ public class TeleportableController : MonoBehaviour
   private bool WithinBounds(Bounds inner, Bounds outer)
   {
     return outer.Contains(inner.min) && outer.Contains(inner.max);
+  }
+
+  public Vector3 RotatePointAroundPivot(Vector3 point, Vector3 pivot, Vector3 angles)
+  {
+    Vector3 dir = point - pivot; // get point direction relative to pivot
+    dir = Quaternion.Euler(angles) * dir; // rotate it
+    point = dir + pivot; // calculate rotated point
+    return point; // return it
   }
 }

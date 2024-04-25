@@ -3,10 +3,10 @@ using UnityEngine;
 public class NewMovementController : MonoBehaviour
 {
     [SerializeField] SpriteRenderer spriteRenderer;
-    public float leftMovement;
-    public float rightMovement;
-    public float upMovement;
-    public float downMovement;
+    private float leftMovement;
+    private float rightMovement;
+    private float upMovement;
+    private float downMovement;
     public float horizontalMovement;
     public float verticalMovement;
     public bool canMove = true;
@@ -71,5 +71,13 @@ public class NewMovementController : MonoBehaviour
     {
         downMovement -= 1f;
         if (downMovement < 0f) downMovement = 0f;
+    }
+
+    public void Clone(NewMovementController original)
+    {
+        upMovement = original.upMovement;
+        downMovement = original.downMovement;
+        leftMovement = original.leftMovement;
+        rightMovement = original.rightMovement;
     }
 }

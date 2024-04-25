@@ -23,11 +23,7 @@ public class Clone : MonoBehaviour
 
   public void ClonePlayer(Clone original)
   {
-    newMovementController.upMovement = original.newMovementController.upMovement;
-    newMovementController.downMovement = original.newMovementController.downMovement;
-    newMovementController.leftMovement = original.newMovementController.leftMovement;
-    newMovementController.rightMovement = original.newMovementController.rightMovement;
-
+    newMovementController.Clone(original.GetComponentInChildren<NewMovementController>());
     animationStateController.ChangeState(animationStateController.GetStateByName(original.animationStateController.currentState.GetName()));
 
     deathController.startPos = original.deathController.startPos;
@@ -36,7 +32,7 @@ public class Clone : MonoBehaviour
     if (easierButtonAssignController != null) easierButtonAssignController.Assign();
     EasierInputAssignController easierInputAssignController = GetComponent<EasierInputAssignController>();
     if (easierInputAssignController != null) easierInputAssignController.Assign();
-
-
   }
+
+
 }

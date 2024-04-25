@@ -20,6 +20,14 @@ public class AnimationStateController : MonoBehaviour
         if (currentState != null)
         {
             currentState.Update(this);
+            if (TryGetComponent(out TeleportableController teleportable))
+            {
+                foreach (GameObject gameObject in teleportable.teleportingObjects)
+                {
+                    AnimationStateController animation = gameObject.GetComponent<AnimationStateController>();
+                    animation.Update();
+                }
+            }
         }
     }
 
@@ -28,6 +36,14 @@ public class AnimationStateController : MonoBehaviour
         if (currentState != null) { currentState.OnExitState(this); }
         currentState = state;
         currentState.OnEnterState(this);
+        if (TryGetComponent(out TeleportableController teleportable))
+        {
+            foreach (GameObject gameObject in teleportable.teleportingObjects)
+            {
+                AnimationStateController animation = gameObject.GetComponent<AnimationStateController>();
+                animation.ChangeState(state);
+            }
+        }
     }
 
     public void OnRun()
