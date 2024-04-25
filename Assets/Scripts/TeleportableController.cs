@@ -32,6 +32,7 @@ public class TeleportableController : MonoBehaviour
     isTeleportingIn = true;
     spriteRenderer.sortingLayerName = "TeleportIn";
     spriteRenderer.maskInteraction = SpriteMaskInteraction.VisibleOutsideMask;
+    gameObject.layer = LayerMask.NameToLayer("TeleportingPlayer");
   }
 
 
@@ -212,6 +213,7 @@ public class TeleportableController : MonoBehaviour
     isTeleportingIn = false;
     isTeleportingOut = false;
     spriteRenderer.maskInteraction = SpriteMaskInteraction.None;
+    gameObject.layer = LayerMask.NameToLayer("Player");
   }
 
   private bool WithinBounds(Bounds inner, Bounds outer)

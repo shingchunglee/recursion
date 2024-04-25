@@ -47,6 +47,7 @@ public class TeleportOutController : MonoBehaviour
     var teleported = Instantiate(gameObject);
     teleported.name = gameObject.name;
     teleported.transform.parent = gameObject.transform.parent;
+    teleported.layer = LayerMask.NameToLayer("TeleportingPlayer");
 
     gameObject.GetComponentInChildren<TeleportableController>().teleportingObjects.Add(teleported);
     teleported.GetComponentInChildren<TeleportableController>().teleportingObjects.Clear();
