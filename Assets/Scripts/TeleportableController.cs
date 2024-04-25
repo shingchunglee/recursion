@@ -121,7 +121,7 @@ public class TeleportableController : MonoBehaviour
           foreach (var item in teleportingObjects)
           {
             item.transform.position += RotatePointAroundPivot(
-              delta,
+              delta / (transform.lossyScale.x / item.transform.lossyScale.x),
               Vector3.zero,
               item.transform.rotation.eulerAngles - transform.rotation.eulerAngles
             );

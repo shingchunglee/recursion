@@ -52,21 +52,6 @@ public class NewInputManager : MonoBehaviour
         {
             ReleaseDown.Invoke();
         }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            GameManager.Instance.ReloadScene();
-        }
-        if (Input.GetKeyDown(KeyCode.Escape) && UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != "LevelSelect")
-        {
-            if (!GameManager.Instance.paused)
-            {
-                GameManager.Instance.Pause();
-            }
-            else
-            {
-                GameManager.Instance.Resume();
-            }
-        }
 
         if (
             !Input.GetKey(KeyCode.LeftArrow)

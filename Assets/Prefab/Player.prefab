@@ -108,10 +108,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 2880425788989298399}
-  leftMovement: 0
-  rightMovement: 0
-  upMovement: 0
-  downMovement: 0
   horizontalMovement: 0
   verticalMovement: 0
   canMove: 1
@@ -129,6 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationController: {fileID: 4840404957126480957}
+  newMovementController: {fileID: 0}
 --- !u!50 &5830809770030898294
 Rigidbody2D:
   serializedVersion: 4
@@ -175,10 +172,10 @@ BoxCollider2D:
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 63
   m_ForceReceiveLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 63
   m_ContactCaptureLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -275,6 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1f0e755733961045b587737a44ac7a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moving: 00000000
 --- !u!114 &8140568307184491273
 MonoBehaviour:
   m_ObjectHideFlags: 0

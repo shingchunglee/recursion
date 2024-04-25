@@ -62,6 +62,11 @@ public class LevelLoader : MonoBehaviour
         LoadLevel("LevelX-0");
     }
 
+    public void LoadLevelX3()
+    {
+        LoadLevel("LevelX-3");
+    }
+
     public void LoadLevelSelect()
     {
         LoadLevel("LevelSelect");

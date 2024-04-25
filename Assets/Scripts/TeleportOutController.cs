@@ -59,6 +59,7 @@ public class TeleportOutController : MonoBehaviour
     teleported.transform.rotation = Quaternion.Euler(inputEulerAngles + transform.rotation.eulerAngles + teleported.transform.rotation.eulerAngles);
     teleported.transform.localScale = gameObject.transform.localScale / ratio;
 
+    teleported.GetComponentInChildren<TeleportableController>().isTeleportingIn = false;
     teleported.GetComponent<TeleportableController>().isTeleportingOut = true;
     teleported.GetComponent<SpriteRenderer>().sortingLayerName = "TeleportOut";
     teleported.GetComponent<BoxCollider2D>().excludeLayers = LayerMask.GetMask("TeleportOut");
