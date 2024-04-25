@@ -50,9 +50,14 @@ public class GameManager : MonoBehaviour
 
   public bool paused = false;
 
-  public void OnWin()
+  public bool win = false;
+
+  public void OnWin(Action invoke)
   {
+    if (win) return;
+    win = true;
     canMove = false;
+    invoke();
     winCanvas.SetActive(true);
   }
 

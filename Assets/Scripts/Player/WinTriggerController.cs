@@ -5,10 +5,12 @@ using UnityEngine;
 public class WinTriggerController : MonoBehaviour
 {
     public AnimationStateController animationController;
+    public NewMovementController newMovementController;
     // Start is called before the first frame update
     void Start()
     {
-
+        animationController = GetComponent<AnimationStateController>();
+        newMovementController = GetComponent<NewMovementController>();
     }
 
     // Update is called once per frame
@@ -22,7 +24,7 @@ public class WinTriggerController : MonoBehaviour
         if (other.TryGetComponent(out WinController winController))
         {
             animationController.OnWin();
-            GameManager.Instance.OnWin();
+            newMovementController.canMove = false;
             winController.win();
         }
     }

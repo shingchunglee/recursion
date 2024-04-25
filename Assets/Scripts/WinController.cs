@@ -8,6 +8,7 @@ public class WinController : MonoBehaviour
 {
     [SerializeField] UnityEvent OnWin;
     public Animator animator;
+    public bool goalReached = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,12 @@ public class WinController : MonoBehaviour
     public void win()
     {
         animator.Play("win");
-        OnWin.Invoke();
+        goalReached = true;
+        GameObject[] goals = GameObject.FindGameObjectsWithTag("Goal");
+        foreach (GameObject goal in goals)
+        {
+            if (!goal.GetComponent<WinController>().goalReached) { return; }
+        }
+        GameManager.Instance.OnWin(OnWin.Invoke);
     }
 }
