@@ -880,6 +880,7 @@ MonoBehaviour:
   playSoundController: {fileID: 2730813734404234715}
   levelLoader: {fileID: 2116525255946347648}
   paused: 0
+  win: 0
 --- !u!114 &2116525255946347648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -892,7 +893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94f71551eda9547cc9f0d3a168dfa7d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionTime: 1.5
+  transitionTime: 3
 --- !u!114 &2730813734404234715
 MonoBehaviour:
   m_ObjectHideFlags: 0

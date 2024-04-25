@@ -52,6 +52,26 @@ public class GameManager : MonoBehaviour
 
   public bool win = false;
 
+  private void Update()
+  {
+
+    if (Input.GetKeyDown(KeyCode.R))
+    {
+      ReloadScene();
+    }
+    if (Input.GetKeyDown(KeyCode.P) && UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != "LevelSelect")
+    {
+      if (!paused)
+      {
+        Instance.Pause();
+      }
+      else
+      {
+        Instance.Resume();
+      }
+    }
+  }
+
   public void OnWin(Action invoke)
   {
     if (win) return;
