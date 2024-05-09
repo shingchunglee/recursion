@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,31 +11,32 @@ public class TeleportController : MonoBehaviour
     Left,
     Right
   }
+  public BoxCollider2D laserTeleportCollider;
   private SpriteMask mask;
   public Direction direction;
 
   public Transform teleportEdge;
-  [SerializeField] TeleportOutController[] teleportOutControllers;
+  public TeleportOutController[] teleportOutControllers;
 
   private void Start()
   {
     mask = GetComponentInChildren<SpriteMask>();
 
-    switch (direction)
-    {
-      case Direction.Up:
-        transform.rotation = Quaternion.Euler(0, 0, 270);
-        break;
-      case Direction.Down:
-        transform.rotation = Quaternion.Euler(0, 0, 90);
-        break;
-      case Direction.Left:
-        transform.rotation = Quaternion.Euler(0, 0, 0);
-        break;
-      case Direction.Right:
-        transform.rotation = Quaternion.Euler(0, 0, 180);
-        break;
-    }
+    // switch (direction)
+    // {
+    //   case Direction.Up:
+    //     transform.rotation = Quaternion.Euler(0, 0, 270);
+    //     break;
+    //   case Direction.Down:
+    //     transform.rotation = Quaternion.Euler(0, 0, 90);
+    //     break;
+    //   case Direction.Left:
+    //     transform.rotation = Quaternion.Euler(0, 0, 0);
+    //     break;
+    //   case Direction.Right:
+    //     transform.rotation = Quaternion.Euler(0, 0, 180);
+    //     break;
+    // }
   }
 
   public Bounds GetMaskBounds()
@@ -56,11 +58,11 @@ public class TeleportController : MonoBehaviour
 
       if ((gameObject.transform.rotation.eulerAngles.z / 90 - transform.rotation.eulerAngles.z / 90) % 180 == 0)
       {
-        teleportPos = new Vector2(teleportPos.x - boxCollider2D.bounds.size.x / 2, teleportPos.y);
+        teleportPos = new Vector2(teleportPos.x - (boxCollider2D == null ? 0 : boxCollider2D.bounds.size.x / 2), teleportPos.y);
       }
       else
       {
-        teleportPos = new Vector2(teleportPos.x - boxCollider2D.bounds.size.y / 2, teleportPos.y);
+        teleportPos = new Vector2(teleportPos.x - (boxCollider2D == null ? 0 : boxCollider2D.bounds.size.y / 2), teleportPos.y);
       }
 
       teleportOutController.Teleport(teleportPos, transform.eulerAngles, ratio, gameObject);
@@ -73,5 +75,10 @@ public class TeleportController : MonoBehaviour
     dir = Quaternion.Euler(angles) * dir; // rotate it
     point = dir + pivot; // calculate rotated point
     return point; // return it
+  }
+
+  internal Vector3 GetRelativePosition(Vector3 point)
+  {
+    return RotatePointAroundPivot(point, Vector3.zero, -transform.eulerAngles);
   }
 }

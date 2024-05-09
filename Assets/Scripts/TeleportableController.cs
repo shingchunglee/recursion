@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.Collections;
 using UnityEngine;
 
 public class TeleportableController : MonoBehaviour
@@ -17,6 +19,8 @@ public class TeleportableController : MonoBehaviour
   private string originalSortingLayer;
   private bool isDestroyed = false;
 
+  public bool isLaser = false;
+
   private void Start()
   {
     spriteRenderer = GetComponent<SpriteRenderer>();
@@ -25,6 +29,7 @@ public class TeleportableController : MonoBehaviour
 
   public void Teleport()
   {
+    if (isLaser) return;
     originalSortingLayer = spriteRenderer.sortingLayerName;
     boxCollider2D.excludeLayers = LayerMask.GetMask("TeleportOut");
     LastPos = transform.position;
@@ -47,7 +52,26 @@ public class TeleportableController : MonoBehaviour
       {
         Teleport();
         teleportController.Teleport(collisionPoint - other.transform.position, gameObject);
+        CheckOverload();
       }
+    }
+  }
+
+  private void CheckOverload()
+  {
+    var allTeleportables = FindObjectsOfType<TeleportableController>();
+    if (allTeleportables.Length > 10)
+    {
+      foreach (var teleportableController in allTeleportables)
+      {
+        teleportableController.Die();
+      }
+      var allGoals = FindObjectsOfType<WinController>();
+      foreach (var goal in allGoals)
+      {
+        goal.UnWin();
+      }
+
     }
   }
 
@@ -89,6 +113,7 @@ public class TeleportableController : MonoBehaviour
 
   private void OnTriggerStay2D(Collider2D other)
   {
+    if (isLaser) return;
     if (other.TryGetComponent(out TeleportController teleportController))
     {
       if (isTeleportingIn)
@@ -227,5 +252,17 @@ public class TeleportableController : MonoBehaviour
     dir = Quaternion.Euler(angles) * dir; // rotate it
     point = dir + pivot; // calculate rotated point
     return point; // return it
+  }
+
+  public void Die()
+  {
+    if (TryGetComponent(out DeathController deathController))
+    {
+      deathController.Die();
+    }
+    else
+    {
+      Destroy(gameObject);
+    }
   }
 }

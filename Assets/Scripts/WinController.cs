@@ -32,4 +32,10 @@ public class WinController : MonoBehaviour
         }
         GameManager.Instance.OnWin(OnWin.Invoke);
     }
+
+    public void UnWin()
+    {
+        goalReached = false;
+        animator.Play("idle");
+    }
 }

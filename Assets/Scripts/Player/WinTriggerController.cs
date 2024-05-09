@@ -26,6 +26,7 @@ public class WinTriggerController : MonoBehaviour
             animationController.OnWin();
             newMovementController.canMove = false;
             winController.win();
+            GetComponent<BoxCollider2D>().enabled = false;
         }
     }
 }

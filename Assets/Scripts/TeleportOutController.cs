@@ -19,21 +19,21 @@ public class TeleportOutController : MonoBehaviour
   private void Start()
   {
     mask = GetComponentInChildren<SpriteMask>();
-    switch (direction)
-    {
-      case Direction.Up:
-        transform.rotation = Quaternion.Euler(0, 0, 270);
-        break;
-      case Direction.Down:
-        transform.rotation = Quaternion.Euler(0, 0, 90);
-        break;
-      case Direction.Left:
-        transform.rotation = Quaternion.Euler(0, 0, 0);
-        break;
-      case Direction.Right:
-        transform.rotation = Quaternion.Euler(0, 0, 180);
-        break;
-    }
+    // switch (direction)
+    // {
+    //   case Direction.Up:
+    //     transform.rotation = Quaternion.Euler(0, 0, 270);
+    //     break;
+    //   case Direction.Down:
+    //     transform.rotation = Quaternion.Euler(0, 0, 90);
+    //     break;
+    //   case Direction.Left:
+    //     transform.rotation = Quaternion.Euler(0, 0, 0);
+    //     break;
+    //   case Direction.Right:
+    //     transform.rotation = Quaternion.Euler(0, 0, 180);
+    //     break;
+    // }
   }
 
   public Bounds GetMaskBounds()
@@ -61,8 +61,16 @@ public class TeleportOutController : MonoBehaviour
 
     teleported.GetComponentInChildren<TeleportableController>().isTeleportingIn = false;
     teleported.GetComponent<TeleportableController>().isTeleportingOut = true;
-    teleported.GetComponent<SpriteRenderer>().sortingLayerName = "TeleportOut";
-    teleported.GetComponent<BoxCollider2D>().excludeLayers = LayerMask.GetMask("TeleportOut");
+    if (teleported.TryGetComponent(out SpriteRenderer spriteRenderer))
+    {
+      spriteRenderer.sortingLayerName = "TeleportOut";
+    }
+    // teleported.GetComponent<SpriteRenderer>().sortingLayerName = "TeleportOut";
+    if (teleported.TryGetComponent(out BoxCollider2D boxCollider2D))
+    {
+      boxCollider2D.excludeLayers = LayerMask.GetMask("TeleportOut");
+    }
+    // teleported.GetComponent<BoxCollider2D>().excludeLayers = LayerMask.GetMask("TeleportOut");
 
     DeathController deathController = teleported.GetComponent<DeathController>();
     if (deathController != null)
@@ -78,5 +86,10 @@ public class TeleportOutController : MonoBehaviour
     dir = Quaternion.Euler(angles) * dir; // rotate it
     point = dir + pivot; // calculate rotated point
     return point; // return it
+  }
+
+  internal Vector3 GetRelativePosition(Vector3 relativeInPosition, float ratio)
+  {
+    return RotatePointAroundPivot(relativeInPosition / ratio, Vector3.zero, -transform.rotation.eulerAngles);
   }
 }

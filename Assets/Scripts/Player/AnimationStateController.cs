@@ -12,11 +12,13 @@ public class AnimationStateController : MonoBehaviour
 
     private void Awake()
     {
-        ChangeState(idleState);
+        // Debug.Log(currentState.GetName());
+        // ChangeState(idleState);
     }
 
     private void Update()
     {
+        Debug.Log(currentState.GetName());
         if (currentState != null)
         {
             currentState.Update(this);
@@ -66,7 +68,7 @@ public class AnimationStateController : MonoBehaviour
 
     public void OnDeath()
     {
-        if (currentState == winState || currentState == deadState) return;
+        if (currentState == deadState) return;
         ChangeState(deadState);
     }
 
