@@ -56,7 +56,7 @@ public class TeleportOutController : MonoBehaviour
     teleportPos = RotatePointAroundPivot(teleportPos / ratio, Vector3.zero, -transform.rotation.eulerAngles);
 
     teleported.transform.position = new Vector3(transform.position.x + -teleportPos.x, transform.position.y + teleportPos.y);
-    teleported.transform.rotation = Quaternion.Euler(inputEulerAngles + transform.rotation.eulerAngles + teleported.transform.rotation.eulerAngles);
+    teleported.transform.rotation = Quaternion.Euler(inputEulerAngles - transform.rotation.eulerAngles + new Vector3(0, 0, 180) + gameObject.transform.rotation.eulerAngles);
     teleported.transform.localScale = gameObject.transform.localScale / ratio;
 
     teleported.GetComponentInChildren<TeleportableController>().isTeleportingIn = false;

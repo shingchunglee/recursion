@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+  public string nextLevel;
   private static GameManager instance;
   public static GameManager Instance
   {
@@ -91,9 +92,19 @@ public class GameManager : MonoBehaviour
     AchievementManager.instance.Unlock("BabySteps");
   }
 
+  public void UnlockAchievementStackOverflow()
+  {
+    AchievementManager.instance.Unlock("StackOverflow");
+  }
+
   public void ReloadScene()
   {
     levelLoader.ReloadLevel();
+  }
+
+  public void LoadNextLevel()
+  {
+    if (nextLevel != null) levelLoader.LoadLevel(nextLevel);
   }
 
   public void Pause()

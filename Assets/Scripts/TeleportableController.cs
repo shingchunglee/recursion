@@ -16,7 +16,7 @@ public class TeleportableController : MonoBehaviour
   private Vector3 LastPos;
   private Vector3 LastRotation;
 
-  private string originalSortingLayer;
+  // private string originalSortingLayer;
   private bool isDestroyed = false;
 
   public bool isLaser = false;
@@ -30,7 +30,7 @@ public class TeleportableController : MonoBehaviour
   public void Teleport()
   {
     if (isLaser) return;
-    originalSortingLayer = spriteRenderer.sortingLayerName;
+    // originalSortingLayer = spriteRenderer.sortingLayerName;
     boxCollider2D.excludeLayers = LayerMask.GetMask("TeleportOut");
     LastPos = transform.position;
     LastRotation = transform.rotation.eulerAngles;
@@ -71,7 +71,7 @@ public class TeleportableController : MonoBehaviour
       {
         goal.UnWin();
       }
-
+      GameManager.Instance.UnlockAchievementStackOverflow();
     }
   }
 
@@ -91,19 +91,19 @@ public class TeleportableController : MonoBehaviour
     Vector2 bottomRight = new(boxBounds.center.x + boxBounds.extents.x, boxBounds.center.y - boxBounds.extents.y);
 
     List<Vector3> contactPoints = new();
-    if (bounds.Contains(topLeft - new Vector2(0.05f, 0.05f)))
+    if (bounds.Contains(topLeft - new Vector2(0.1f, -0.1f)))
     {
       contactPoints.Add(topLeft);
     }
-    if (bounds.Contains(topRight - new Vector2(-0.05f, 0.05f)))
+    if (bounds.Contains(topRight - new Vector2(-0.1f, -0.1f)))
     {
       contactPoints.Add(topRight);
     }
-    if (bounds.Contains(bottomLeft - new Vector2(0.05f, -0.05f)))
+    if (bounds.Contains(bottomLeft - new Vector2(0.1f, 0.1f)))
     {
       contactPoints.Add(bottomLeft);
     }
-    if (bounds.Contains(bottomRight - new Vector2(-0.05f, -0.05f)))
+    if (bounds.Contains(bottomRight - new Vector2(-0.1f, 0.1f)))
     {
       contactPoints.Add(bottomRight);
     }
@@ -132,6 +132,13 @@ public class TeleportableController : MonoBehaviour
         )
         {
           isDestroyed = true;
+          foreach (var item in teleportingObjects)
+          {
+            if (item.TryGetComponent(out Clone clone))
+            {
+              clone.ClonePlayer(gameObject.GetComponent<Clone>());
+            }
+          }
           Destroy(gameObject);
         }
 
@@ -227,13 +234,9 @@ public class TeleportableController : MonoBehaviour
   {
     foreach (var item in teleportingObjects)
     {
-      if (item.TryGetComponent(out Clone clone))
-      {
-        clone.ClonePlayer(gameObject.GetComponent<Clone>());
-      }
       item.GetComponent<TeleportableController>().UnTeleport();
     }
-    spriteRenderer.sortingLayerName = originalSortingLayer;
+    // spriteRenderer.sortingLayerName = originalSortingLayer;
     boxCollider2D.excludeLayers = LayerMask.GetMask();
     isTeleportingIn = false;
     isTeleportingOut = false;

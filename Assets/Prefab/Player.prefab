@@ -288,6 +288,7 @@ MonoBehaviour:
   isTeleportingIn: 0
   isTeleportingOut: 0
   teleportingObjects: []
+  isLaser: 0
 --- !u!114 &8047997327079491540
 MonoBehaviour:
   m_ObjectHideFlags: 0

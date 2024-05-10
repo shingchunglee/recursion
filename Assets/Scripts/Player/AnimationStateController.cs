@@ -1,3 +1,4 @@
+using System.Data.Common;
 using UnityEngine;
 
 public class AnimationStateController : MonoBehaviour
@@ -18,7 +19,6 @@ public class AnimationStateController : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(currentState.GetName());
         if (currentState != null)
         {
             currentState.Update(this);
@@ -87,7 +87,7 @@ public class AnimationStateController : MonoBehaviour
             case "Dead":
                 return deadState;
             default:
-                return null;
+                return idleState;
         }
     }
 }

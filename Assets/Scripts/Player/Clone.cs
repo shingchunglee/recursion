@@ -9,6 +9,7 @@ public class Clone : MonoBehaviour
   DeathController deathController;
   CollideConveyerController collideConveyerController;
   TeleportableController teleportableController;
+  SpriteRenderer spriteRenderer;
 
   private void Awake()
   {
@@ -19,12 +20,13 @@ public class Clone : MonoBehaviour
     deathController = GetComponent<DeathController>();
     collideConveyerController = GetComponent<CollideConveyerController>();
     teleportableController = GetComponent<TeleportableController>();
+    spriteRenderer = GetComponent<SpriteRenderer>();
   }
 
   public void ClonePlayer(Clone original)
   {
     newMovementController.Clone(original.GetComponentInChildren<NewMovementController>());
-    animationStateController.ChangeState(animationStateController.GetStateByName(original.animationStateController.currentState.GetName()));
+    animationStateController.ChangeState(animationStateController.GetStateByName(original.animationStateController.currentState?.GetName() ?? "Idle"));
 
     deathController.startPos = original.deathController.startPos;
 
@@ -32,6 +34,8 @@ public class Clone : MonoBehaviour
     if (easierButtonAssignController != null) easierButtonAssignController.Assign();
     EasierInputAssignController easierInputAssignController = GetComponent<EasierInputAssignController>();
     if (easierInputAssignController != null) easierInputAssignController.Assign();
+    spriteRenderer.sortingLayerName = original.spriteRenderer.sortingLayerName;
+
   }
 
 
