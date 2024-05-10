@@ -152,10 +152,17 @@ public class TeleportableController : MonoBehaviour
           Vector3 delta = transform.position - LastPos;
           foreach (var item in teleportingObjects)
           {
+            Vector3 correctedIn = item.transform.rotation.eulerAngles.z == 90 ? new Vector3(0, 0, 270) :
+               item.transform.rotation.eulerAngles.z % 360 == 270 ? new Vector3(0, 0, 90) :
+               item.transform.rotation.eulerAngles;
+            Vector3 corrected = transform.rotation.eulerAngles.z % 360 == 90 ? new Vector3(0, 0, 270) :
+              transform.rotation.eulerAngles.z % 360 == 270 ? new Vector3(0, 0, 90) :
+              transform.rotation.eulerAngles;
             item.transform.position += RotatePointAroundPivot(
               delta / (transform.lossyScale.x / item.transform.lossyScale.x),
               Vector3.zero,
               item.transform.rotation.eulerAngles - transform.rotation.eulerAngles
+            // correctedIn - corrected
             );
           }
           LastPos = transform.position;
