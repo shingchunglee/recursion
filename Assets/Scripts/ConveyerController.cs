@@ -40,7 +40,7 @@ public class ConveyerController : MonoBehaviour
 
     public void Move(NewMovementController movementController)
     {
-        if (movementController.transform.rotation.eulerAngles.z % 360f == 0)
+        if (Mathf.RoundToInt(movementController.transform.rotation.eulerAngles.z % 360f) == 0)
         {
             switch (direction)
             {
@@ -58,7 +58,7 @@ public class ConveyerController : MonoBehaviour
                     break;
             }
         }
-        else if (movementController.transform.rotation.eulerAngles.z % 360 == 90)
+        else if (Mathf.RoundToInt(movementController.transform.rotation.eulerAngles.z) % 360 == 90)
         {
             switch (direction)
             {
@@ -76,7 +76,7 @@ public class ConveyerController : MonoBehaviour
                     break;
             }
         }
-        else if (movementController.transform.rotation.eulerAngles.z % 360 == 180)
+        else if (Mathf.RoundToInt(movementController.transform.rotation.eulerAngles.z) % 360 == 180)
         {
             switch (direction)
             {
@@ -94,7 +94,7 @@ public class ConveyerController : MonoBehaviour
                     break;
             }
         }
-        else if (movementController.transform.rotation.eulerAngles.z % 360 == 270)
+        else if (Mathf.RoundToInt(movementController.transform.rotation.eulerAngles.z) % 360 == 270)
         {
             switch (direction)
             {
@@ -116,7 +116,7 @@ public class ConveyerController : MonoBehaviour
 
     public void Stop(NewMovementController movementController)
     {
-        if (movementController.transform.rotation.eulerAngles.z % 360f == 0)
+        if (Mathf.RoundToInt(movementController.transform.rotation.eulerAngles.z) % 360f == 0)
         {
             switch (direction)
             {
@@ -134,7 +134,7 @@ public class ConveyerController : MonoBehaviour
                     break;
             }
         }
-        else if (movementController.transform.rotation.eulerAngles.z % 360 == 90)
+        else if (Mathf.RoundToInt(movementController.transform.rotation.eulerAngles.z) % 360 == 90)
         {
             switch (direction)
             {
@@ -152,7 +152,7 @@ public class ConveyerController : MonoBehaviour
                     break;
             }
         }
-        else if (movementController.transform.rotation.eulerAngles.z % 360 == 180)
+        else if (Mathf.RoundToInt(movementController.transform.rotation.eulerAngles.z) % 360 == 180)
         {
             switch (direction)
             {
@@ -170,7 +170,7 @@ public class ConveyerController : MonoBehaviour
                     break;
             }
         }
-        else if (movementController.transform.rotation.eulerAngles.z % 360 == 270)
+        else if (Mathf.RoundToInt(movementController.transform.rotation.eulerAngles.z) % 360 == 270)
         {
             switch (direction)
             {
