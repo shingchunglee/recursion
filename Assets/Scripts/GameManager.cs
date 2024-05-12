@@ -92,6 +92,11 @@ public class GameManager : MonoBehaviour
     AchievementManager.instance.Unlock("BabySteps");
   }
 
+  public void UnlockAchievementQuitter()
+  {
+    AchievementManager.instance.Unlock("Quitter");
+  }
+
   public void UnlockAchievementStackOverflow()
   {
     AchievementManager.instance.Unlock("StackOverflow");

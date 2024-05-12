@@ -13206,11 +13206,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958, type: 3}
       propertyPath: States.Array.size
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958, type: 3}
       propertyPath: AchievementList.Array.size
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958, type: 3}
       propertyPath: States.Array.data[4].Achieved
@@ -13234,10 +13234,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958, type: 3}
       propertyPath: AchievementList.Array.data[5].Key
-      value: DeathByDeletion
+      value: Quitter
       objectReference: {fileID: 0}
     - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958, type: 3}
       propertyPath: AchievementList.Array.data[6].Key
+      value: DeathByDeletion
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958, type: 3}
+      propertyPath: AchievementList.Array.data[7].Key
       value: StackOverflow
       objectReference: {fileID: 0}
     - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958, type: 3}
@@ -13258,6 +13262,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958, type: 3}
       propertyPath: AchievementList.Array.data[6].Spoiler
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958, type: 3}
+      propertyPath: AchievementList.Array.data[7].Spoiler
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958, type: 3}
@@ -13294,18 +13302,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958, type: 3}
       propertyPath: AchievementList.Array.data[5].Description
-      value: Press Delete on your keyboard
+      value: Quit World 0-3
       objectReference: {fileID: 0}
     - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958, type: 3}
       propertyPath: AchievementList.Array.data[5].DisplayName
-      value: Death By Deletion
+      value: Quitter
       objectReference: {fileID: 0}
     - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958, type: 3}
       propertyPath: AchievementList.Array.data[6].Description
-      value: Clone more than 10 items at the same time
+      value: Press Delete on your keyboard
       objectReference: {fileID: 0}
     - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958, type: 3}
       propertyPath: AchievementList.Array.data[6].DisplayName
+      value: Death By Deletion
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958, type: 3}
+      propertyPath: AchievementList.Array.data[7].Description
+      value: Clone more than 10 items at the same time
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958, type: 3}
+      propertyPath: AchievementList.Array.data[7].DisplayName
       value: Stack Overflow
       objectReference: {fileID: 0}
     - target: {fileID: 5869893064832991961, guid: 31c71d95d8fbeb7479842253d3964958, type: 3}
