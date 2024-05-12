@@ -7,6 +7,7 @@ TagManager:
   - Music
   - SceneTransition
   - Goal
+  - Mirror
   layers:
   - Default
   - TransparentFX
