@@ -24,7 +24,7 @@ public class NewMovementController : MonoBehaviour
         verticalMovement = upMovement - downMovement;
         Vector3 movement = new Vector3(horizontalMovement, verticalMovement, 0);
 
-        transform.Translate(movement * speed * transform.lossyScale.x * Time.deltaTime);
+        transform.Translate(speed * Time.deltaTime * transform.lossyScale.x * movement);
     }
 
     public void MoveLeft()

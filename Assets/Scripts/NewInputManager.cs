@@ -69,6 +69,7 @@ public class NewInputManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Delete))
         {
             DeleteDown.Invoke();
+            // GameManager.Instance.UnlockAchievementDeathByDeletion();
         }
     }
 

@@ -107,7 +107,19 @@ MonoBehaviour:
       m_Calls: []
   DeleteDown:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6299014030582700329, guid: 3b082c8a6534e48219ca943b31e66814, type: 3}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: UnlockAchievementDeathByDeletion
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6284156124431968957
 MonoBehaviour:
   m_ObjectHideFlags: 0

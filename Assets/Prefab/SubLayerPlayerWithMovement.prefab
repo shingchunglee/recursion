@@ -235,7 +235,7 @@ PrefabInstance:
     - target: {fileID: -38699993694983757, guid: 0fcad78fb9fac56459917ecbff0cc580, type: 3}
       propertyPath: keySound
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: f1b45f63a0218884ebf1033e24195ba6, type: 3}
     - target: {fileID: -38699993694983757, guid: 0fcad78fb9fac56459917ecbff0cc580, type: 3}
       propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.size
       value: 1
