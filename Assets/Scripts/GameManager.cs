@@ -97,6 +97,21 @@ public class GameManager : MonoBehaviour
     AchievementManager.instance.Unlock("StackOverflow");
   }
 
+  public void UnlockAchievementWorld1Completionist()
+  {
+    AchievementManager.instance.Unlock("World1Completionist");
+  }
+
+  public void UnlockAchievementWorld2Completionist()
+  {
+    AchievementManager.instance.Unlock("World2Completionist");
+  }
+
+  public void UnlockAchievementWorld3Completionist()
+  {
+    AchievementManager.instance.Unlock("World3Completionist");
+  }
+
   public void ReloadScene()
   {
     levelLoader.ReloadLevel();
