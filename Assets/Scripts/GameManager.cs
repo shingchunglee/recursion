@@ -65,10 +65,12 @@ public class GameManager : MonoBehaviour
       if (!paused)
       {
         Instance.Pause();
+        pauseCanvas.SetActive(true);
       }
       else
       {
         Instance.Resume();
+        pauseCanvas.SetActive(false);
       }
     }
   }
@@ -141,13 +143,11 @@ public class GameManager : MonoBehaviour
   {
     paused = true;
     canMove = false;
-    pauseCanvas.SetActive(true);
   }
 
   public void Resume()
   {
     paused = false;
     canMove = true;
-    pauseCanvas.SetActive(false);
   }
 }
