@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 8140568307184491273}
   - component: {fileID: 8047997327079491540}
   - component: {fileID: 7218492730797815980}
+  - component: {fileID: 4162889124873587873}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -315,3 +316,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+--- !u!114 &4162889124873587873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4025588744256459255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e5bcea1ae2c94e45b762f366bc1627c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

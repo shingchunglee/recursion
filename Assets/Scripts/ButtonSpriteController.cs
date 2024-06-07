@@ -15,4 +15,9 @@ public class ButtonSpriteController : MonoBehaviour
     {
         spriteRenderer.sprite = ReleaseSprite;
     }
+
+    public void OnDisabled()
+    {
+        spriteRenderer.sprite = PressedSprite;
+    }
 }
