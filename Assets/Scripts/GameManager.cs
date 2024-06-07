@@ -82,6 +82,11 @@ public class GameManager : MonoBehaviour
     winCanvas.SetActive(true);
   }
 
+  public void UnlockAchievementBehindTheScenes()
+  {
+    AchievementManager.instance.Unlock("BehindTheScenes");
+  }
+
   public void UnlockAchievementDeathByDeletion()
   {
     AchievementManager.instance.Unlock("DeathByDeletion");

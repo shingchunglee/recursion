@@ -7527,6 +7527,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94f71551eda9547cc9f0d3a168dfa7d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &769160115 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6299014030582700329, guid: 3b082c8a6534e48219ca943b31e66814, type: 3}
+  m_PrefabInstance: {fileID: 265117517}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13806d03eb20a461ea48accf21994ced, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &771329372
 GameObject:
   m_ObjectHideFlags: 0
@@ -9088,6 +9099,34 @@ PrefabInstance:
     - target: {fileID: 6658870583968424555, guid: 03727f47d993740c9bf736a0aef67728, type: 3}
       propertyPath: m_Name
       value: Goal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580405336469558289, guid: 03727f47d993740c9bf736a0aef67728, type: 3}
+      propertyPath: OnWin.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580405336469558289, guid: 03727f47d993740c9bf736a0aef67728, type: 3}
+      propertyPath: OnWin.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580405336469558289, guid: 03727f47d993740c9bf736a0aef67728, type: 3}
+      propertyPath: OnWin.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 769160115}
+    - target: {fileID: 7580405336469558289, guid: 03727f47d993740c9bf736a0aef67728, type: 3}
+      propertyPath: OnWin.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580405336469558289, guid: 03727f47d993740c9bf736a0aef67728, type: 3}
+      propertyPath: OnWin.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UnlockAchievementBehindTheScenes
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580405336469558289, guid: 03727f47d993740c9bf736a0aef67728, type: 3}
+      propertyPath: OnWin.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580405336469558289, guid: 03727f47d993740c9bf736a0aef67728, type: 3}
+      propertyPath: OnWin.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 9197600507853773392, guid: 03727f47d993740c9bf736a0aef67728, type: 3}
       propertyPath: m_LocalScale.x
@@ -14662,11 +14701,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958, type: 3}
       propertyPath: States.Array.size
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958, type: 3}
       propertyPath: AchievementList.Array.size
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958, type: 3}
       propertyPath: States.Array.data[4].Achieved
@@ -14674,6 +14713,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958, type: 3}
       propertyPath: States.Array.data[5].Achieved
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958, type: 3}
+      propertyPath: States.Array.data[6].Achieved
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958, type: 3}
+      propertyPath: States.Array.data[7].Achieved
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958, type: 3}
@@ -14694,14 +14741,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958, type: 3}
       propertyPath: AchievementList.Array.data[5].Key
-      value: Quitter
+      value: BehindTheScenes
       objectReference: {fileID: 0}
     - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958, type: 3}
       propertyPath: AchievementList.Array.data[6].Key
-      value: DeathByDeletion
+      value: Quitter
       objectReference: {fileID: 0}
     - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958, type: 3}
       propertyPath: AchievementList.Array.data[7].Key
+      value: DeathByDeletion
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958, type: 3}
+      propertyPath: AchievementList.Array.data[8].Key
       value: StackOverflow
       objectReference: {fileID: 0}
     - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958, type: 3}
@@ -14766,27 +14817,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958, type: 3}
       propertyPath: AchievementList.Array.data[5].Description
-      value: Quit World 0-3
+      value: Beat the settings page
       objectReference: {fileID: 0}
     - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958, type: 3}
       propertyPath: AchievementList.Array.data[5].DisplayName
-      value: Quitter
+      value: Behind The Scenes
       objectReference: {fileID: 0}
     - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958, type: 3}
       propertyPath: AchievementList.Array.data[6].Description
-      value: Press Delete on your keyboard
+      value: Quit World 0-3
       objectReference: {fileID: 0}
     - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958, type: 3}
       propertyPath: AchievementList.Array.data[6].DisplayName
-      value: Death By Deletion
+      value: Quitter
       objectReference: {fileID: 0}
     - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958, type: 3}
       propertyPath: AchievementList.Array.data[7].Description
-      value: Clone more than 10 items at the same time
+      value: Press Delete on your keyboard
       objectReference: {fileID: 0}
     - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958, type: 3}
       propertyPath: AchievementList.Array.data[7].DisplayName
-      value: Stack Overflow
+      value: Death By Deletion
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958, type: 3}
+      propertyPath: AchievementList.Array.data[8].Description
+      value: Have more than 10 clones on the screen
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958, type: 3}
+      propertyPath: AchievementList.Array.data[8].DisplayName
+      value: StackOverflow
       objectReference: {fileID: 0}
     - target: {fileID: 5869893064832991961, guid: 31c71d95d8fbeb7479842253d3964958, type: 3}
       propertyPath: m_LocalPosition.x
