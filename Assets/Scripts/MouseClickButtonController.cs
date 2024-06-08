@@ -11,9 +11,12 @@ public class MouseClickButtonController : MonoBehaviour
     [SerializeField] UnityEvent MouseExit;
     public bool isMouseOver = false;
     public AudioClip keySound;
+    [SerializeField] DisableButtonController disableButtonController;
 
-    private void Start()
+    // Start is called before the first frame update
+    void Start()
     {
+        disableButtonController = GetComponent<DisableButtonController>();
     }
 
     private void OnDisable()
@@ -23,6 +26,7 @@ public class MouseClickButtonController : MonoBehaviour
 
     private void Update()
     {
+        if (disableButtonController.isDisabled) return;
         if (Input.GetMouseButtonUp(0) && isMouseOver)
         {
             MouseUp.Invoke();
@@ -31,12 +35,14 @@ public class MouseClickButtonController : MonoBehaviour
 
     void OnMouseDown()
     {
+        if (disableButtonController.isDisabled) return;
         GameManager.Instance.playSoundController.PlayClipOnce(keySound);
         MouseDown.Invoke();
     }
 
     void OnMouseEnter()
     {
+        if (disableButtonController.isDisabled) return;
         isMouseOver = true;
         if (!Input.GetMouseButton(0)) return;
         GameManager.Instance.playSoundController.PlayClipOnce(keySound);
@@ -45,6 +51,7 @@ public class MouseClickButtonController : MonoBehaviour
 
     void OnMouseExit()
     {
+        if (disableButtonController.isDisabled) return;
         isMouseOver = false;
         if (!Input.GetMouseButton(0)) return;
         MouseExit.Invoke();

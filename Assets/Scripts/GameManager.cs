@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     canMove = true;
 
     levelLoader = GetComponent<LevelLoader>();
+    levelData = GetComponent<LevelData>();
   }
 
   private void Start()
@@ -48,6 +49,8 @@ public class GameManager : MonoBehaviour
   public GameObject pauseCanvas;
   public PlaySoundController playSoundController;
   public LevelLoader levelLoader;
+
+  public LevelData levelData;
 
   public bool paused = false;
 
@@ -149,5 +152,10 @@ public class GameManager : MonoBehaviour
   {
     paused = false;
     canMove = true;
+  }
+
+  public void ClearGameData()
+  {
+    DataPersistenceManager.Instance.ClearGame();
   }
 }
